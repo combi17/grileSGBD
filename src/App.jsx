@@ -1,21 +1,69 @@
-import { Database } from 'lucide-react'
+import { useState } from 'react'
 import questions from './data/questions.json'
+import { getRandomQuestions } from './utils/quiz'
+import LandingPage from './components/LandingPage'
+import QuizPage from './components/QuizPage'
+import ResultsPage from './components/ResultsPage'
 
-function App() {
+const TEST_SIZE = 20
+const PASS_THRESHOLD = 10
+
+export default function App() {
+  const [screen, setScreen] = useState('landing')
+  const [test, setTest] = useState([])
+  const [index, setIndex] = useState(0)
+  const [score, setScore] = useState({ correct: 0, incorrect: 0 })
+
+  function startTest() {
+    setTest(getRandomQuestions(questions, TEST_SIZE))
+    setIndex(0)
+    setScore({ correct: 0, incorrect: 0 })
+    setScreen('quiz')
+  }
+
+  function handleAnswer(isCorrect) {
+    setScore((s) => ({
+      correct: s.correct + (isCorrect ? 1 : 0),
+      incorrect: s.incorrect + (isCorrect ? 0 : 1),
+    }))
+  }
+
+  function handleNext() {
+    if (index + 1 < test.length) setIndex((i) => i + 1)
+    else setScreen('results')
+  }
+
+  if (screen === 'landing') {
+    return (
+      <LandingPage
+        totalQuestions={questions.length}
+        testSize={TEST_SIZE}
+        onStart={startTest}
+      />
+    )
+  }
+
+  if (screen === 'quiz') {
+    return (
+      <QuizPage
+        key={index}
+        question={test[index]}
+        index={index}
+        total={test.length}
+        score={score}
+        onAnswer={handleAnswer}
+        onNext={handleNext}
+      />
+    )
+  }
+
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-pink-100 p-6 text-center text-gray-800">
-      <div className="mb-4 flex items-center gap-3">
-        <Database className="h-8 w-8 text-pink-400" />
-        <h1 className="text-3xl font-semibold">Pregatire Examen SGBD</h1>
-      </div>
-      <p className="text-gray-600">
-        Setup initial gata. {questions.length} grile incarcate din{' '}
-        <code className="rounded bg-white/70 px-1.5 py-0.5 text-sm text-pink-600">
-          src/data/questions.json
-        </code>
-      </p>
-    </div>
+    <ResultsPage
+      score={score}
+      total={test.length}
+      passThreshold={PASS_THRESHOLD}
+      onRestart={startTest}
+      onMenu={() => setScreen('landing')}
+    />
   )
 }
-
-export default App

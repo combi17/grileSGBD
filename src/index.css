@@ -2,12 +2,68 @@
 
 @theme {
   --font-sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
   font-family: var(--font-sans);
+  color: #44403c; /* stone-700 */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fundal cu mesh radial roz pal, pentru atmosfera */
+.app-bg {
+  background-color: #fff5f7;
+  background-image:
+    radial-gradient(at 18% -5%, rgba(251, 207, 232, 0.55) 0px, transparent 50%),
+    radial-gradient(at 92% 8%, rgba(254, 205, 211, 0.5) 0px, transparent 45%),
+    radial-gradient(at 50% 108%, rgba(252, 231, 243, 0.7) 0px, transparent 55%);
+}
+
+/* Gradient roz garantat (independent de denumirile utilitarelor Tailwind) */
+.grad-primary {
+  background-image: linear-gradient(to right, #fb7185, #ec4899);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-up {
+  animation: fade-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  60% {
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.animate-pop-in {
+  animation: pop-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Scrollbar subtire pentru fereastra de cod */
+.code-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+.code-scroll::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 9999px;
 }
