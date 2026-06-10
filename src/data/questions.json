@@ -1,0 +1,6275 @@
+[
+  {
+    "id": 1,
+    "text": "Precizati care dintre urmatoarele afirmatii sunt adevarate:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "SGBD este componenta software a unui sistem de baza de date care interactioneaza cu toate celelalte componente ale acestuia, asigurand legatura si independenta intre elementele sistemului",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "Obiectivul general al unui SGBD este de a furniza suportul software complet pentru dezvoltarea de aplicatii informatice cu baza de date",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "Arhitectura pe componente a unui SGBD este compusa din: nucleu, interfete si instrumente",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "SGBD este un ansamblu complex de programe care asigura interfata intre o baza de date si utilizatorii acesteia",
+        "isCorrect": true
+      },
+      {
+        "id": "E",
+        "text": "Functiile de baza ale unui SGBD sunt descriere, manipulare, utilizare, administrare",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Limbajul PL/SQL:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "este un limbaj de programare universal",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "este un limbaj de descriere a datelor",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "este un limbaj de modelare",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "este un limbaj de tratare a exceptiilor",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "este un limbaj de programare procedural",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Functiile unui SGBD sunt:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "manipularea programelor",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "definirea programelor",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "utilizarea sistemului informational",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "descrierea datelor",
+        "isCorrect": true
+      },
+      {
+        "id": "E",
+        "text": "administrarea datelor",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Se da urmatoarea secventa de comenzi. Cate linii rezultat vor fi afisate?",
+    "code": "i := 2;\nwhile i < 3\nloop\n  i := 4;\n  dbms_output.put_line('Valoarea contorului este: ' || i);\nend loop;",
+    "options": [
+      {
+        "id": "A",
+        "text": "una",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "doua",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "blocul se va executa la infinit",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "blocul nu se va executa deoarece nu putem folosi dbms_output.put_line in cadrul unei bucle",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "niciuna",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Se considera urmatoarea secventa de program. Care dintre urmatoarele afirmatii sunt corecte?",
+    "code": "declare\n  cursor cursor1 is select id_angajat, nume from Angajati;\n  vid angajati.id_angajat%type;\n  vnume char(20);\nbegin\n  open cursor1;\n  fetch cursor1 into vid, vnume;\nend;",
+    "options": [
+      {
+        "id": "A",
+        "text": "returneaza o eroare deoarece nu contine ciclul LOOP...END LOOP",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "lucreaza cu un cursor explicit",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "lucreaza cu un cursor implicit",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "se folosesc variabile scalare",
+        "isCorrect": true
+      },
+      {
+        "id": "E",
+        "text": "returneaza o eroare deoarece nu se inchide explicit cursorul",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Pentru un cursor intr-un ciclu FOR se vor elimina operatiile explicite de:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "optimizare a cursorului",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "declarare a cursorului",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "incarcare de date din linia curenta din cursor in variabile",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "deschidere a cursorului",
+        "isCorrect": true
+      },
+      {
+        "id": "E",
+        "text": "inchidere a cursorului",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Din urmatoarea structura de bloc PL/SQL:",
+    "code": "declare\n  instructiuni;\nbegin\n  instructiuni;\nexception\n  instructiuni;\nend;",
+    "options": [
+      {
+        "id": "A",
+        "text": "sunt optionale toate sectiunile",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "sunt obligatorii toate sectiunile",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "este obligatorie doar sectiunea executabila",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "este obligatorie doar sectiunea declarativa",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "lipseste sectiunea pentru tratarea erorilor",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Atributele unui cursor explicit sunt:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "%FETCH, %CLOSE, %OPEN",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "%ISOPEN, %NOTFOUND, %ROWCOUNT",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "%ISCLOSE, %FOUND, %ROWCOUNT",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "%ROWCOUNT, %FOUND, %ISOPEN",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "In limbajul PL/SQL nu pot fi executate in mod direct comenzile SQL:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "ALTER",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "GRANT",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "CREATE, DROP",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "COMMIT, SAVEPOINT",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "DELETE, UPDATE",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "SGBD permite realizarea urmatoarelor activitati:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "accesul la date",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "protectia datelor",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "intretinerea bazei de date",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "definirea structurii bazei de date",
+        "isCorrect": true
+      },
+      {
+        "id": "E",
+        "text": "construirea de rapoarte si grafice",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Care dintre urmatoarele definiri de variabile PL/SQL sunt eronate?",
+    "code": "a. v_salariul NUMBER NOT NULL;\nb. v_data_comanda := SYSDATE;\nc. v_nume VARCHAR2(15) DEFAULT 'Ion';\nd. v_prenume VARCHAR2(5) := 'Anastasia Nicoleta Ioana';\ne. v_test BOOLEAN NOT NULL := FALSE;",
+    "options": [
+      {
+        "id": "A",
+        "text": "v_salariul NUMBER NOT NULL;  (lipseste valoarea de initializare pentru o variabila NOT NULL)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "v_data_comanda := SYSDATE;  (lipseste declararea tipului variabilei)",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "v_nume VARCHAR2(15) DEFAULT 'Ion';",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "v_prenume VARCHAR2(5) := 'Anastasia Nicoleta Ioana';  (sirul depaseste dimensiunea declarata)",
+        "isCorrect": true
+      },
+      {
+        "id": "E",
+        "text": "v_test BOOLEAN NOT NULL := FALSE;",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Se da urmatoarea secventa de comenzi. Care afirmatii sunt eronate?",
+    "code": "declare\n  nota_examen NUMBER;\nbegin\n  if nota_examen >= 5 then\n    dbms_output.put_line('promovat');\n  else\n    dbms_output.put_line('nepromovat');\n  end if;\nend;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "se va afisa NULL",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "se afiseaza nepromovat daca nota obtinuta este mai mica decat 5 si promovat in caz contrar",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "nu se va afisa nimic",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "se afiseaza promovat",
+        "isCorrect": true
+      },
+      {
+        "id": "E",
+        "text": "se afiseaza nepromovat",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "Atributul %FOUND caracterizeaza:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "o tabela virtuala",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "un cursor implicit",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "o inregistrare",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "o exceptie predefinita",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "un cursor explicit",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Se considera blocul PL/SQL. Care din urmatoarele afirmatii sunt corecte?",
+    "code": "declare\n  cursor c1 is select * from angajati order by salariul desc;\nbegin\n  for r1 in c1\n  loop\n    dbms_output.put_line(r1.nume);\n  end loop;\nend;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "se utilizeaza o structura de control alternativa",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "se va genera eroare deoarece nu este specificata conditia de iesire din structura repetitiva",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "se afiseaza numele tuturor angajatilor",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "se utilizeaza un cursor explicit",
+        "isCorrect": true
+      },
+      {
+        "id": "E",
+        "text": "se afiseaza numele primilor angajati cu cel mai mare salariu",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Care din urmatoarele constructii PL/SQL sunt corecte?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "exception\n  when too_many_rows then secv_comenzi;\nend;",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "exception\n  when others then secv_comenzi;\n  when no_data_found then secv_comenzi2;\nend;",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "exception\n  when no_data_found then secv_comenzi1;\n  when no_data_found then secv_comenzi2;\n  when others then secv_comenzi3;\nend;",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "exception\n  when others then secv_comenzi;\nend;",
+        "isCorrect": true
+      },
+      {
+        "id": "E",
+        "text": "exception\n  when no_data_found then secv_comenzi1;\n  when others then secv_comenzi2;\nend;",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Parametrii de tip OUT definiti intr-o procedura pot primi valori implicite?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "True",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "False",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Se considera blocul PL/SQL. Care din urmatoarele afirmatii sunt corecte?",
+    "code": "create or replace procedure sal_mediu (p_sal_mediu OUT NUMBER)\nis\nbegin\n  select avg(salariul) into p_sal_mediu from angajati;\nend;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "in cadrul comenzilor din corpul procedurii se utilizeaza o functie de grup",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "procedura primeste un parametru de iesire",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "se creeaza un subprogram",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "genereaza eroare deoarece lipseste comanda RETURN",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "genereaza eroare deoarece comanda SELECT are structura incorecta",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Obiectivele unui SGBD sunt:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "asigurarea partajabilitatii datelor",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "asigurarea resurselor materiale",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "asigurarea dependentei datelor fata de aplicatii",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "asigurarea unei redundante minime si controlate a datelor",
+        "isCorrect": true
+      },
+      {
+        "id": "E",
+        "text": "asigurarea protectiei datelor",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Care dintre urmatoarele conventii ce privesc parametrii formali si reali ai unui subprogram sunt valabile in PL/SQL?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "trebuie sa fie acelasi numar de parametri",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "parametrii nu trebuie sa fie in aceeasi ordine",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "parametrii trebuie sa fie in aceeasi ordine",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "tipul pentru fiecare parametru corespunzator trebuie sa fie diferit",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "numele parametrilor din cele doua categorii nu pot fi diferite",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Se pot defini pachete care cuprind doar partea de specificatii?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "True",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "False",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "Se pot defini pachete care cuprind doar corpul pachetului?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "True",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "False",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "Corpul pachetului poate fi schimbat fara a modifica specificatia acestuia?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "True",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "False",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "Se pot defini functii cu acelasi nume ca si cele predefinite?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "True",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "False",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "Se poate declara o procedura in specificatii, dar fara sa fie explicitata in corpul pachetului? Dar invers (in corp, fara sa fie declarata in specificatii)?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "True, True",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "True, False",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "False, True",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "False, False",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "Ce va afisa blocul PL/SQL?",
+    "code": "declare\n  cursor c is select nume from angajati;\n  r c%rowtype;\nbegin\n  fetch c into r;\n  dbms_output.put_line('Numele este ' || r.nume);\nexception\n  when no_data_found then dbms_output.put_line('A');\n  when others then dbms_output.put_line('B');\nend;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "va afisa B",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "va genera eroare",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "va afisa A",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "va afisa numele primului angajat",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "va afisa numele tuturor angajatilor",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "Ce va afisa blocul PL/SQL?",
+    "code": "begin\n  if sql%found then dbms_output.put_line(0);\n  else dbms_output.put_line(1);\n  end if;\nend;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "0",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "1",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "va genera o eroare de compilare",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "va returna o exceptie",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "NULL",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "Ce va afisa blocul PL/SQL?",
+    "code": "begin\n  if not sql%found then dbms_output.put_line(0);\n  else dbms_output.put_line(1);\n  end if;\nend;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "0",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "1",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "va genera o eroare de compilare",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "va returna o exceptie",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "NULL",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "Se considera creata cu succes functia PL/SQL cu urmatorul antet:\nFUNCTION afiseaza_salariul (p_id angajati.id_angajat%TYPE) RETURN NUMBER\nCare dintre urmatoarele variante de apel sunt corecte?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "EXECUTE DBMS_OUTPUT.PUT_LINE(afiseaza_salariul(100))",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "EXECUTE afiseaza_salariul(100)",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "DECLARE\n  v_sal angajati.salariul%TYPE;\nBEGIN\n  v_sal := afiseaza_salariul(100);\n  DBMS_OUTPUT.PUT_LINE('Salariul este ' || v_sal);\nEND;",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "SELECT id_functie, afiseaza_salariul(id_angajat) AS salariu FROM angajati;",
+        "isCorrect": true
+      },
+      {
+        "id": "E",
+        "text": "CALL afiseaza_salariul(100)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "Se da urmatoarea secventa de comenzi. Care dintre urmatoarele afirmatii sunt corecte?",
+    "code": "CREATE OR REPLACE PROCEDURE modifica(p_id IN clienti.id_client%type)\nIS\nBEGIN\n  UPDATE clienti SET limita_credit = 2500 WHERE id_client = p_id;\nEND;\n/\n\nCREATE OR REPLACE PROCEDURE exemplu\nIS\n  v_id clienti.id_client%type;\n  CURSOR cl IS SELECT id_client FROM clienti;\nBEGIN\n  OPEN cl;\n  FOR i IN 1..4\n  LOOP\n    FETCH cl INTO v_id;\n    modifica(v_id);\n  END LOOP;\nEND;\n/\n\nEXECUTE exemplu;",
+    "options": [
+      {
+        "id": "A",
+        "text": "se va genera eroare deoarece variabila i folosita in structura repetitiva nu a fost declarata",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "se creeaza doua proceduri stocate",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "se modifica limita de credit pentru 4 clienti",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "se utilizeaza apelul unei proceduri din alta procedura",
+        "isCorrect": true
+      },
+      {
+        "id": "E",
+        "text": "se va genera eroare deoarece procedura exemplu nu are parametri",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "Ce valoare returneaza interogarea pentru un angajat al carui comision (comision_pct) este NULL?",
+    "code": "SELECT salariul + (salariul * comision_pct) AS venit\nFROM angajati\nWHERE id_angajat = 100;",
+    "options": [
+      {
+        "id": "A",
+        "text": "NULL (orice operatie aritmetica cu NULL produce NULL)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "valoarea salariului",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "0",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "o eroare ORA la executie",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "text": "Ce afiseaza urmatoarea interogare?",
+    "code": "SELECT NVL2(NULL, 'are valoare', 'este null') FROM dual;",
+    "options": [
+      {
+        "id": "A",
+        "text": "are valoare",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "este null",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "NULL",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "eroare",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "text": "Care este rezultatul interogarii?",
+    "code": "SELECT COALESCE(NULL, NULL, 5, 10) FROM dual;",
+    "options": [
+      {
+        "id": "A",
+        "text": "NULL",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "5 (prima expresie non-NULL din lista)",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "10",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "15",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "text": "Ce returneaza interogarea?",
+    "code": "SELECT DECODE(2, 1, 'unu', 2, 'doi', 'altul') FROM dual;",
+    "options": [
+      {
+        "id": "A",
+        "text": "unu",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "doi",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "altul",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "NULL",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "text": "Care clauza este corecta pentru a filtra grupurile dupa media salariului intr-o interogare cu GROUP BY?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "WHERE AVG(salariul) > 5000",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "HAVING AVG(salariul) > 5000",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "GROUP BY AVG(salariul) > 5000",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "ORDER BY AVG(salariul) > 5000",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "text": "Tabela angajati are 107 randuri, dintre care doar 35 au coloana comision_pct completata. Ce returneaza interogarea?",
+    "code": "SELECT COUNT(*), COUNT(comision_pct) FROM angajati;",
+    "options": [
+      {
+        "id": "A",
+        "text": "107, 107",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "107, 35  (COUNT pe o coloana ignora valorile NULL)",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "35, 35",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "107, 72",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "text": "Ce tip de join include si angajatii care NU au un departament asociat (id_departament este NULL)?",
+    "code": "SELECT a.nume, d.nume_departament\nFROM angajati a ??? departamente d\n  ON a.id_departament = d.id_departament;",
+    "options": [
+      {
+        "id": "A",
+        "text": "INNER JOIN",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "LEFT OUTER JOIN (cu angajati in stanga)",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "RIGHT OUTER JOIN (cu departamente in dreapta)",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "NATURAL JOIN",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "text": "Ce returneaza interogarea?",
+    "code": "SELECT nume\nFROM angajati\nWHERE salariul > ALL (SELECT salariul\n                      FROM angajati\n                      WHERE id_departament = 30);",
+    "options": [
+      {
+        "id": "A",
+        "text": "Angajatii cu salariul mai mare decat cel mai mare salariu din departamentul 30",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "Angajatii cu salariul mai mare decat cel mai mic salariu din departamentul 30",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "Toti angajatii din departamentul 30",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "O eroare deoarece subinterogarea returneaza mai multe randuri",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "text": "Daca subinterogarea returneaza cel putin o valoare NULL, ce se intampla cu urmatoarea interogare?",
+    "code": "SELECT nume\nFROM angajati\nWHERE id_manager NOT IN (SELECT id_manager FROM angajati);",
+    "options": [
+      {
+        "id": "A",
+        "text": "Returneaza toate randurile",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "Nu returneaza niciun rand (NOT IN cu NULL produce UNKNOWN pentru toate randurile)",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "Returneaza doar managerii",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Eroare de sintaxa",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "text": "De ce aceasta interogare NU returneaza corect cei mai bine platiti 5 angajati?",
+    "code": "SELECT *\nFROM angajati\nWHERE ROWNUM <= 5\nORDER BY salariul DESC;",
+    "options": [
+      {
+        "id": "A",
+        "text": "ROWNUM se aplica inainte de ORDER BY, deci se ordoneaza 5 randuri alese arbitrar",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "ROWNUM nu poate fi folosit impreuna cu ORDER BY",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "Lipseste clauza GROUP BY",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Interogarea returneaza corect cei mai bine platiti 5 angajati",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "text": "Ce returneaza interogarea (Oracle 12c sau mai nou)?",
+    "code": "SELECT nume, salariul\nFROM angajati\nORDER BY salariul DESC\nFETCH FIRST 3 ROWS ONLY;",
+    "options": [
+      {
+        "id": "A",
+        "text": "Cei mai prost platiti 3 angajati",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "Cei mai bine platiti 3 angajati",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "Eroare de sintaxa",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Toti angajatii ordonati descrescator",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "text": "Ce face apelul NEXTVAL pentru o secventa (sequence) in Oracle?",
+    "code": "SELECT seq_angajati.NEXTVAL FROM dual;",
+    "options": [
+      {
+        "id": "A",
+        "text": "Returneaza valoarea curenta fara a o incrementa",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "Incrementeaza secventa si returneaza noua valoare",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "Reseteaza secventa la valoarea de start",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Sterge secventa",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "text": "Care este diferenta dintre atributele %TYPE si %ROWTYPE in PL/SQL?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "%TYPE preia tipul unei coloane/variabile, iar %ROWTYPE preia structura unui rand intreg",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "Sunt identice, doar sintaxa difera",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "%ROWTYPE preia tipul unei coloane, iar %TYPE preia un rand",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "%ROWTYPE se foloseste doar pentru secvente",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "text": "Ce avantaj principal aduce utilizarea lui BULK COLLECT?",
+    "code": "SELECT * BULK COLLECT INTO t FROM produse;",
+    "options": [
+      {
+        "id": "A",
+        "text": "Reduce numarul comutarilor de context intre motorul SQL si cel PL/SQL",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "Cripteaza automat datele incarcate",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "Blocheaza tabela pentru alti utilizatori",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Creeaza automat un index pe tabela",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "text": "In sectiunea EXCEPTION, ce returneaza functia SQLERRM?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "Codul numeric al erorii curente",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "Mesajul textual asociat erorii curente",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "Numarul de randuri afectate de ultima comanda",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Numele tabelei implicate in eroare",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "text": "Care este regula privind handlerul WHEN OTHERS intr-o sectiune EXCEPTION?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "Trebuie sa fie primul handler declarat",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "Daca este folosit, trebuie sa fie ultimul handler din sectiunea EXCEPTION",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "Poate aparea de mai multe ori in acelasi bloc",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Este obligatoriu in orice bloc PL/SQL",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "text": "Ce interval de coduri de eroare este permis pentru RAISE_APPLICATION_ERROR?",
+    "code": "RAISE_APPLICATION_ERROR(-20001, 'Mesaj de eroare personalizat');",
+    "options": [
+      {
+        "id": "A",
+        "text": "-20000 ... -20999",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "-1 ... -999",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "1 ... 1000",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "-10000 ... -10999",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "text": "Intr-un trigger BEFORE INSERT ... FOR EACH ROW, ce reprezinta :NEW.salariul?",
+    "code": "CREATE OR REPLACE TRIGGER trg_sal\nBEFORE INSERT ON angajati\nFOR EACH ROW\nBEGIN\n  -- :NEW.salariul ?\nEND;",
+    "options": [
+      {
+        "id": "A",
+        "text": "Valoarea veche a coloanei",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "Valoarea care urmeaza sa fie inserata; poate fi modificata in trigger",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "Intotdeauna NULL la INSERT",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Genereaza eroare deoarece :NEW nu exista la INSERT",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "text": "Eroarea ORA-04091 'table is mutating' apare de obicei cand:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "Un trigger la nivel de rand (FOR EACH ROW) interogheaza sau modifica chiar tabela pe care este definit",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "Tabela nu are definita o cheie primara",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "Se foloseste COMMIT in interiorul triggerului",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Tabela este goala in momentul executiei",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "text": "Pe ce tip de obiect se defineste in mod tipic un trigger INSTEAD OF?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "Pe o tabela obisnuita",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "Pe o vizualizare (view), de regula neactualizabila direct",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "Pe o secventa",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Pe un index",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "text": "De ce nu este permis COMMIT intr-un trigger obisnuit (non-autonom)?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "Triggerul face parte din tranzactia instructiunii DML care l-a declansat, deci nu o poate finaliza separat",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "COMMIT nu exista in limbajul PL/SQL",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "Triggerele ruleaza doar in cadrul instructiunilor SELECT",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Este permis fara nicio restrictie",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "text": "Doua subprograme dintr-un pachet (package) pot avea acelasi nume daca:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "Au liste de parametri diferite ca numar, tip sau ordine (overloading / supraincarcare)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "Returneaza acelasi tip de date",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "Niciodata; numele trebuie sa fie unic in pachet",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Doar daca ambele sunt private (nedeclarate in specificatie)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "text": "De ce trebuie folosit EXECUTE IMMEDIATE pentru a executa instructiuni DDL (ex. CREATE TABLE) intr-un bloc PL/SQL?",
+    "code": "BEGIN\n  EXECUTE IMMEDIATE 'ALTER TABLE clienti ADD (cnp CHAR(13) UNIQUE)';\nEND;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "PL/SQL nu permite DDL static; DDL se poate executa doar ca SQL dinamic",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "Pentru ca EXECUTE IMMEDIATE este pur si simplu mai rapid",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "DDL nu se poate executa deloc din PL/SQL",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Pentru a evita COMMIT-ul implicit al instructiunilor DDL",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "text": "Ce afiseaza SQL%ROWCOUNT in blocul de mai jos, daca in departamentul 50 sunt 8 angajati?",
+    "code": "UPDATE angajati\nSET salariul = salariul * 1.1\nWHERE id_departament = 50;\nDBMS_OUTPUT.PUT_LINE(SQL%ROWCOUNT);",
+    "options": [
+      {
+        "id": "A",
+        "text": "1, indiferent de cate randuri exista",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "8 (numarul de randuri actualizate de ultima comanda)",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "NULL",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Numarul total de randuri din tabela angajati",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "text": "La ce se foloseste instructiunea MERGE in Oracle?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "Doar la stergerea conditionata a randurilor",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "La o operatie combinata de INSERT/UPDATE (upsert) in functie de o conditie de potrivire",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "La crearea de tabele noi",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "La unirea fizica a doua baze de date",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "text": "Prin ce difera o constrangere UNIQUE de o constrangere PRIMARY KEY in Oracle?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "UNIQUE permite valori NULL, in timp ce PRIMARY KEY nu permite valori NULL",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "Sunt complet identice",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "UNIQUE nu creeaza niciun index",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "PRIMARY KEY permite valori duplicate",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "text": "Ce face o constrangere de tip CHECK, de exemplu CHECK (salariul > 0)?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "Respinge orice INSERT sau UPDATE care incalca conditia specificata",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "Seteaza automat salariul la 0 cand valoarea este invalida",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "Creeaza un trigger ascuns pe tabela",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Permite si valori negative, doar avertizeaza",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "text": "Care afirmatie despre o vizualizare (VIEW) in Oracle este corecta?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "Stocheaza fizic o copie a datelor din tabelele sursa",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "Este o interogare salvata (tabela virtuala) si, de regula, nu stocheaza date proprii",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "Este acelasi lucru cu un index",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Nu poate fi interogata cu SELECT",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "text": "Comenzile GRANT si REVOKE fac parte din categoria:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "DML (Data Manipulation Language)",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "DCL (Data Control Language)",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "DDL (Data Definition Language)",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "TCL (Transaction Control Language)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "text": "Care afirmatie despre instructiunea TRUNCATE este corecta?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "Poate fi restransa cu o clauza WHERE pentru a sterge anumite randuri",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "Este o comanda DDL: nu poate fi anulata prin ROLLBACK si nu activeaza triggerele DELETE",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "Este in general mai lenta decat DELETE pe tabele mari",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Activeaza triggerele BEFORE DELETE pentru fiecare rand",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "text": "Se considera urmatorul bloc PL/SQL. Care dintre urmatoarele afirmatii sunt corecte?",
+    "code": "SET SERVEROUTPUT ON\nDECLARE\n  CURSOR cursor1 IS SELECT id_angajat, nume FROM Angajati;\n  vid angajati.id_angajat%TYPE;\n  vnume CHAR(20);\nBEGIN\n  OPEN cursor1;\n  WHILE cursor1%FOUND LOOP\n    FETCH cursor1 INTO vid, vnume;\n    DBMS_OUTPUT.PUT_LINE('Angajatul ' || vnume);\n  END LOOP;\nEND;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "blocul PL/SQL este eronat",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "lucreaza cu un cursor explicit",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "blocul este corect, dar nu afiseaza nimic",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "parcurge secvential o zona de memorie interna",
+        "isCorrect": true
+      },
+      {
+        "id": "E",
+        "text": "lucreaza cu un cursor implicit",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "text": "Se da urmatoarea secventa PL/SQL. Care dintre urmatoarele afirmatii sunt corecte?",
+    "code": "create or replace package p_angajati\nis\n  v_total number;\n  function CAUT_ANGAJAT(p_id_angajat angajati.id_angajat%type)\n    return angajati.nume%type;\n  function CAUT_ANGAJAT(p_nume angajati.nume%type, p_id_dep departamente.id_departament%type)\n    return angajati.salariul%type;\nend;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "functiile din pachet sunt supraincarcate",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "pachetul nu este compilat cu succes deoarece functiile CAUT_ANGAJAT au aceeasi denumire",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "pachetul nu este compilat cu succes deoarece lipseste cuvantul BODY",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "variabila v_total este publica si poate fi accesata astfel: p_angajati.v_total",
+        "isCorrect": true
+      },
+      {
+        "id": "E",
+        "text": "supraincarcarea nu este permisa in acest context",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "text": "Se da urmatoarea secventa de comenzi. Care dintre urmatoarele afirmatii sunt corecte?",
+    "code": "create or replace FUNCTION f_emp_vechime\n  (p_data_angajare IN angajati.data_angajare%type)\nreturn number\nis\nbegin\n  return to_number(round((sysdate - p_data_angajare)/365, 0));\nend f_emp_vechime;\n/\n\nSELECT id_angajat, nume, prenume, f_emp_vechime(data_angajare)\nFROM angajati\nWHERE f_emp_vechime(data_angajare) > 10;",
+    "options": [
+      {
+        "id": "A",
+        "text": "functia returneaza numarul de zile dintre data curenta si data primita ca parametru",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "functia returneaza numarul de ani dintre data curenta si data primita ca parametru",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "se va genera eroare deoarece functia nu poate fi utilizata in comanda SELECT",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "instructiunea SELECT afiseaza vechimea in zile a angajatilor cu vechimea mai mare de 10 zile",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "instructiunea SELECT afiseaza vechimea in ani a angajatilor cu vechimea mai mare de 10 ani",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "text": "Care din urmatoarele functii sau instructiuni NU pot fi folosite direct in cadrul unei instructiuni PL/SQL de atribuire?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "SUBSTR",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "MAX",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "DECODE",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "NVL",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "MIN",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "text": "Se considera urmatorul bloc PL/SQL. Care dintre urmatoarele afirmatii sunt corecte?",
+    "code": "SET SERVEROUTPUT ON\nDECLARE\n  p clienti%ROWTYPE;\n  CURSOR c IS SELECT * FROM clienti WHERE limita_credit > 1000\n    ORDER BY limita_credit DESC;\nBEGIN\n  FOR p IN c LOOP\n    DBMS_OUTPUT.PUT_LINE('clientul ' || p.nume_client || ' are limita de credit: ' || p.limita_credit);\n    EXIT WHEN p%ROWCOUNT >= 5;\n  END LOOP;\nEND;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "blocul va afisa o eroare deoarece nu se poate iesi cu EXIT dintr-un ciclu FOR",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "blocul afiseaza un top al primilor 5 clienti cu limita de credit cea mai mare",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "blocul nu se va executa deoarece nu se foloseste corect variabila p",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "blocul utilizeaza un cursor explicit prin care se parcurg clientii cu limita de credit mai mare de 1000",
+        "isCorrect": true
+      },
+      {
+        "id": "E",
+        "text": "blocul utilizeaza o variabila de tip record",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "text": "Se considera urmatorul bloc PL/SQL. Care dintre urmatoarele afirmatii sunt corecte?",
+    "code": "SET SERVEROUTPUT ON\nDECLARE\n  CURSOR cursor1 IS SELECT id_angajat, nume FROM Angajati ORDER BY salariul DESC;\n  vid angajati.id_angajat%TYPE;\n  vnume CHAR(20);\nBEGIN\n  OPEN cursor1;\n  FETCH cursor1 INTO vid, vnume;\n  DBMS_OUTPUT.PUT_LINE('Angajatul ' || vnume);\n  CLOSE cursor1;\nEND;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "se declara doua variabile scalare",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "blocul PL/SQL este eronat deoarece lipseste structura repetitiva",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "se afiseaza numele angajatului cu cel mai mare salariu",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "lucreaza cu un cursor implicit",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "lucreaza cu un cursor explicit",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "text": "Se considera urmatorul bloc PL/SQL. Care dintre urmatoarele afirmatii sunt corecte?",
+    "code": "SET SERVEROUTPUT ON\nDECLARE\n  procent NUMBER(2);\nBEGIN\n  procent := 15;\n  UPDATE Angajati\n  SET salariul = salariul * procent/100\n  WHERE id_angajat = 120;\n  ROLLBACK;\nEXCEPTION\n  WHEN OTHERS THEN\n    DBMS_OUTPUT.PUT_LINE(SQLERRM);\nEND;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "comanda ROLLBACK nu este permisa intr-un bloc PL/SQL",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "blocul realizeaza o operatie de actualizare",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "comanda UPDATE este permisa intr-un bloc PL/SQL",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "este afisata valoarea unui atribut al cursorului implicit",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "poate apare exceptia no_data_found in cazul in care nu este gasit angajatul cu id-ul 120",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "text": "Printre avantajele SGBD se regasesc:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "existenta mecanismelor de optimizare in limbajul procedural",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "implementarea operatorilor relationali in regasirea datelor",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "dependenta datelor fata de suportul fizic de stocare",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "normalizarea datelor",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "mecanisme pentru optimizarea accesului la date",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "text": "Se considera urmatorul bloc PL/SQL. Care dintre urmatoarele afirmatii sunt corecte?",
+    "code": "create or replace FUNCTION afiseaza_salariul (v_id angajati.id_angajat%type)\nRETURN number\nIS\n  v_sal number(8,2);\nBEGIN\n  select salariul into v_sal from angajati where id_angajat = v_id;\nEXCEPTION\n  WHEN no_data_found THEN return -1;\n  WHEN too_many_rows THEN return -2;\n  WHEN others THEN return 0;\nEND;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "blocul defineste incorect o variabila locala",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "functia genereaza eroare deoarece exceptiile nu sunt tratate corespunzator",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "functia genereaza eroare deoarece nu returneaza valoarea salariului (lipseste RETURN pe ramura normala)",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "functia genereaza eroare deoarece parametrul este incorect specificat",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "blocul creeaza un subprogram",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "text": "Precizati care dintre urmatoarele afirmatii sunt adevarate:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "SGBD are ca obiectiv asigurarea performantelor globale ale aplicatiei si partajabilitatea resurselor de calcul",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "functiile de baza ale unui SGBD sunt: asigurarea redundantei minime si controlate, manipulare, partajabilitate, optimizare",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "arhitectura pe componente a unui SGBD este compusa din: nucleu, baza de date si instrumente",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "unul dintre obiectivele SGBD este de a asigura independenta logica si fizica a datelor",
+        "isCorrect": true
+      },
+      {
+        "id": "E",
+        "text": "SGBD este un ansamblu de elemente interconditionate care contribuie la realizarea si exploatarea unei aplicatii cu baze de date",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "text": "Se considera urmatorul bloc PL/SQL. Care dintre urmatoarele afirmatii sunt corecte?",
+    "code": "DECLARE\n  data varchar2(25);\n  v number(2);\nBEGIN\n  select sysdate - 30 into data from dual\n  where 1 = 2;\n  DBMS_OUTPUT.PUT_LINE(data);\nEXCEPTION\n  WHEN NO_DATA_FOUND THEN\n    DBMS_OUTPUT.PUT_LINE(v);\nEND;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "apare o eroare deoarece variabila data este de tip VARCHAR2",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "se afiseaza un numar de zile",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "apare o exceptie tratata corespunzator",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "blocul se executa cu succes, dar nu afiseaza nimic",
+        "isCorrect": true
+      },
+      {
+        "id": "E",
+        "text": "se afiseaza o data calendaristica",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "text": "Se considera tabela Angajati si urmatoarele secvente. Precizati care dintre afirmatii sunt adevarate:",
+    "code": "CREATE OR REPLACE TRIGGER t_angajati\nBEFORE UPDATE OR DELETE ON Angajati\nFOR EACH ROW\nWHEN (new.salariul < 1000)\nBEGIN\n  RAISE_APPLICATION_ERROR(-20100, 'Operatie interzisa!');\nEND;\n/\n\ndelete from angajati where id_angajat = 120;",
+    "options": [
+      {
+        "id": "A",
+        "text": "apare o eroare deoarece variabila :new nu este adresata corespunzator",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "la operatia de stergere va apare exceptia -20100 ca urmare a executiei declansatorului",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "declansatorul se compileaza cu succes",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "operatia de stergere se va realiza cu succes deoarece declansatorul nu se executa in acest caz",
+        "isCorrect": true
+      },
+      {
+        "id": "E",
+        "text": "declansatorul se executa pentru fiecare inregistrare din tabela Angajati",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "text": "Se considera secventa de comenzi. Presupunand ca in departamentul 50 lucreaza 20 de angajati, precizati care dintre afirmatii sunt adevarate:",
+    "code": "create or replace TRIGGER t_salariul\nAFTER UPDATE OF id_functie ON angajati FOR EACH ROW\nBEGIN\n  INSERT INTO istoric_functii VALUES\n    (:old.id_angajat, :old.data_angajare, SYSDATE, :old.id_functie, :old.id_departament);\n  COMMIT;\nEND;\n/\n\nUPDATE Angajati\nSET id_functie = 'IT_DEV'\nWHERE id_departament = 50;",
+    "options": [
+      {
+        "id": "A",
+        "text": "declansatorul este creat cu erori de compilare",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "instructiunea COMMIT din declansator va finaliza ambele comenzi (INSERT si UPDATE)",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "declansatorul este compilat cu succes insa va apare o eroare la executia operatiei DML",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "instructiunea COMMIT nu este permisa in declansator in acest context",
+        "isCorrect": true
+      },
+      {
+        "id": "E",
+        "text": "instructiunea INSERT din declansator se finalizeaza independent de tranzactia principala",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "text": "Se considera urmatoarea secventa de comenzi. Care dintre urmatoarele afirmatii sunt corecte?",
+    "code": "DECLARE\n  i number;\nBEGIN\n  i := 7;\n  WHILE i < 15 LOOP\n    i := i + 3;\n    DBMS_OUTPUT.PUT_LINE('Valoarea contorului i este: ' || i);\n  END LOOP;\nEND;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "secventa va afisa 10, 13, 16",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "blocul se va executa la infinit",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "blocul nu se va executa deoarece nu putem folosi dbms_output.put_line in cadrul unei bucle",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "secventa va afisa 7, 10, 13",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "lipseste operatia de incrementare a contorului",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "text": "Se considera urmatorul bloc PL/SQL. Ce afiseaza blocul?",
+    "code": "DECLARE\n  n CONSTANT VARCHAR2(5) := 2;\n  a BOOLEAN DEFAULT false;\nBEGIN\n  IF n BETWEEN -1 AND 1 OR a THEN\n    DBMS_OUTPUT.PUT_LINE('A');\n  ELSIF n IS NOT NULL AND NOT a THEN\n    DBMS_OUTPUT.PUT_LINE('B');\n  ELSE\n    DBMS_OUTPUT.PUT_LINE('C');\n  END IF;\nEND;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "A",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "B",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "C",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "un mesaj de eroare deoarece nu se foloseste corect constanta",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "un mesaj de eroare deoarece nu se defineste corect variabila booleana",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "text": "Pentru exceptiile definite de utilizator este obligatoriu:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "sa fie tratate in sectiunea executabila",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "sa li se atribuie un cod de eroare",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "sa fie declarate",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "sa fie propagate catre mediul apelant",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "sa fie invocate de utilizator (prin RAISE)",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "text": "Care dintre urmatoarele blocuri NU se stocheaza in baza de date?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "Functiile",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "Declansatorii",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "Pachetele",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Blocurile anonime",
+        "isCorrect": true
+      },
+      {
+        "id": "E",
+        "text": "Procedurile",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "text": "Atributul %ROWTYPE:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "Este un atribut de tip record care permite definirea unei variabile in functie de necesitatile programatorului",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "Niciuna dintre variantele enuntate",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "Specifica tipul de data al unei singure coloane",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Se utilizeaza numai la definirea parametrilor subprogramelor",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "Este un atribut de tip record care permite definirea unei variabile de acelasi tip cu o inregistrare dintr-o tabela sau cursor",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "text": "Care dintre urmatoarele metode NU pot fi utilizate pentru o variabila de tip INDEX BY TABLE (tablou asociativ)?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "PREVIOUS",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "EXISTS",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "ROWCOUNT",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "FIRST",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "DELETE",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "text": "Care dintre urmatoarele NU este un atribut specific cursorului explicit?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "CLOSE",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "ROWCOUNT",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "NOTFOUND",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "FOUND",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "ISOPEN",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "text": "Fie urmatoarea secventa de cod. Ce se intampla la rularea codului?",
+    "code": "DECLARE\n  CURSOR c(p_id NUMBER, p_id1 NUMBER) IS\n    SELECT id_departament, nume, salariul FROM angajati\n    WHERE id_departament = p_id AND salariul >= p_id1;\nBEGIN\n  FOR r IN c(20, 2000) LOOP\n    DBMS_OUTPUT.PUT_LINE(r.id_departament || ' ' || r.nume || ' ' || r.salariul);\n  END LOOP;\n  FOR r IN c(30, 3000) LOOP\n    DBMS_OUTPUT.PUT_LINE(r.id_departament || ' ' || r.nume || ' ' || r.salariul);\n  END LOOP;\nEND;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "Se executa un cursor cu 2 parametri de 2 ori",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "Apare o eroare deoarece cursorii ar fi trebuit imbricati",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "Apare o eroare deoarece unul dintre departamente nu exista, eroarea nefiind tratata",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Niciuna dintre variante",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "Defineste 2 cursori cu 2 parametri si se executa",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "text": "Fie urmatoarea secventa de cod. Avand in vedere ca departamentul cu id-ul 1500 nu exista, ce se intampla la rulare?",
+    "code": "DECLARE\n  x number(8);\nBEGIN\n  SELECT sum(salariul) INTO x FROM angajati WHERE id_departament = 1500;\nEND;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "Apare o eroare",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "Se declanseaza exceptia NO_DATA_FOUND",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "Valoarea lui x va fi nula (NULL)",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "Valoarea lui x va fi 1500",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "Valoarea lui x va fi 0",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "text": "Fie secventa de cod. Ce se intampla la rulare?",
+    "code": "CREATE OR REPLACE PROCEDURE sal_mediu\n  (p_sal_mediu IN number)\nIS\nBEGIN\n  SELECT AVG(salariul) INTO p_sal_mediu FROM angajati;\nEND;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "Apare o eroare (nu se poate folosi SELECT INTO pe un parametru IN)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "Se creeaza procedura sal_mediu fara erori de compilare",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "Se creeaza o procedura fara erori care calculeaza salariul mediu",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Se creeaza o procedura fara erori care calculeaza salariul mediu pe departament",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "Niciuna dintre variantele enuntate",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "text": "Despre triggeri, care afirmatie este adevarata?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "Niciuna dintre variantele enuntate",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "Se declanseaza la una sau mai multe operatii de actualizare (DML)",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "Se declanseaza atunci cand apar situatii exceptionale legate de conexiune",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "In triggeri nu se utilizeaza niciodata DECLARE",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "Se utilizeaza numai pentru tabele fizice",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "text": "Fie urmatoarea secventa de cod. Ce se va intampla la rulare?",
+    "code": "CREATE OR REPLACE TRIGGER generare_codprodus\nBEFORE INSERT ON produse\nFOR EACH ROW\nWHEN (new.id_produs > 3000)\nBEGIN\n  SELECT seq.nextval INTO :new.id_produs FROM dual;\nEND;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "Nu se declanseaza deoarece valoarea lui new pentru id_produs nu este cunoscuta inca",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "Apare o eroare deoarece in WHEN (new.id_produs > 3000) new trebuia sa aiba ':'",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "Se creeaza un trigger cu erori de compilare",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Se creeaza un trigger valid care se va declansa",
+        "isCorrect": true
+      },
+      {
+        "id": "E",
+        "text": "Niciuna dintre variantele enuntate",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "text": "Care dintre urmatoarele sectiuni este obligatorie intr-un bloc PL/SQL?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "EXCEPTION",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "DECLARE",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "BEGIN",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "EXECUTE IMMEDIATE",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "EXECUTE",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "text": "Fie urmatoarea secventa de cod. Care este rolul acestei secvente?",
+    "code": "DECLARE\n  v_rez number;\nBEGIN\n  v_rez := sp_nr(2800);\n  dbms_output.put_line(v_rez);\nEND;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "Apeleaza o procedura sp_nr intr-un bloc",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "Declanseaza o exceptie",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "Apeleaza o functie sp_nr intr-un bloc (rezultatul este atribuit lui v_rez)",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "Apare o eroare deoarece sintaxa nu este corecta",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "Declanseaza un trigger",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "text": "Ce rol are etichetarea blocurilor (block labels) in PL/SQL?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "Permite prefixarea (calificarea) unei variabile pentru a fi referita din blocuri imbricate",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "Permite utilizarea unor directive",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "Este obligatorie atunci cand avem blocuri imbricate",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Etichetarea blocurilor nu este posibila",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "Asociaza o denumire blocului pentru a fi stocat in baza de date",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "text": "Care dintre urmatoarele comenzi NU pot fi utilizate fara EXECUTE IMMEDIATE intr-un bloc PL/SQL?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "INSERT",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "GRANT",
+        "isCorrect": true
+      },
+      {
+        "id": "C",
+        "text": "ROLLBACK",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "SELECT",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "SAVEPOINT",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "text": "La declararea unei variabile in PL/SQL este necesar sa:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "Precizam tipul de data",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "Precizam daca este sau nu nula",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "Primeasca o valoare implicita",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Precizam daca este sau nu constanta",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "O initializam obligatoriu",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "text": "Atributul %TYPE:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "Ne permite sa preluam tipul unei exceptii",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "Niciuna dintre variantele enuntate",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "Preia tipul de data al unei coloane/variabile atunci cand o declaram",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "Se utilizeaza numai pentru a preciza tipul parametrilor subprogramelor",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "Ne permite sa preluam tipul de data al unei inregistrari intregi",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "text": "Fie urmatoarea secventa de cod (a este o procedura de afisare). Ce va afisa?",
+    "code": "DECLARE\n  X NUMBER(3);\n  Y NUMBER(3);\nBEGIN\n  X := 100;\n  IF x <> y THEN\n    a('test');\n  END IF;\nEND;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "100",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "TRUE",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "O eroare",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Nu va afisa nimic (y este NULL, deci x <> y este NULL, nu TRUE)",
+        "isCorrect": true
+      },
+      {
+        "id": "E",
+        "text": "test",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "text": "Fie urmatoarea secventa de cod (a este o procedura de afisare). Ce va afisa?",
+    "code": "DECLARE\n  X NUMBER(3) := NULL;\n  Y NUMBER(3) := NULL;\nBEGIN\n  IF x = y THEN\n    a('test');\n  END IF;\nEND;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "test",
+        "isCorrect": false
+      },
+      {
+        "id": "B",
+        "text": "O eroare",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "Nu va afisa nimic (NULL = NULL este NULL, nu TRUE)",
+        "isCorrect": true
+      },
+      {
+        "id": "D",
+        "text": "Niciuna dintre variantele enuntate",
+        "isCorrect": false
+      },
+      {
+        "id": "E",
+        "text": "TRUE",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "text": "Ce returneaza interogarea?",
+    "code": "SELECT SUBSTR('Database', 1, 4) FROM dual;",
+    "options": [
+      {
+        "id": "A",
+        "text": "Data",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "base",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "Datab",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "abase",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "text": "Ce returneaza interogarea (pozitia primei aparitii a literei)?",
+    "code": "SELECT INSTR('ORACLE', 'A') FROM dual;",
+    "options": [
+      {
+        "id": "A",
+        "text": "3",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "1",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "2",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "0",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "text": "Ce valoare returneaza interogarea (atentie la spatiul final)?",
+    "code": "SELECT LENGTH('Oracle ') FROM dual;",
+    "options": [
+      {
+        "id": "A",
+        "text": "7",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "6",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "5",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "NULL",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "text": "Ce returneaza interogarea?",
+    "code": "SELECT REPLACE('AAA', 'A', 'BB') FROM dual;",
+    "options": [
+      {
+        "id": "A",
+        "text": "BBBBBB",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "BB",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "BBB",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "AAA",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "text": "Ce returneaza interogarea (concatenare cu conversie implicita)?",
+    "code": "SELECT 'Cod' || 100 FROM dual;",
+    "options": [
+      {
+        "id": "A",
+        "text": "Cod100",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "o eroare ORA",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "Cod",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "100",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "text": "Ce returneaza interogarea?",
+    "code": "SELECT MOD(17, 5) FROM dual;",
+    "options": [
+      {
+        "id": "A",
+        "text": "2",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "3",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "3.4",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "0",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "text": "Ce returneaza interogarea?",
+    "code": "SELECT ROUND(15.49, 1) FROM dual;",
+    "options": [
+      {
+        "id": "A",
+        "text": "15.5",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "15.4",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "15",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "16",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "text": "Ce returneaza interogarea?",
+    "code": "SELECT TRUNC(15.99, 1) FROM dual;",
+    "options": [
+      {
+        "id": "A",
+        "text": "15.9",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "16",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "15",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "15.99",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "text": "Ce returneaza interogarea (rotunjire cu precizie negativa)?",
+    "code": "SELECT ROUND(1234.56, -2) FROM dual;",
+    "options": [
+      {
+        "id": "A",
+        "text": "1200",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "1234",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "1230",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "1300",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "text": "Ce returneaza interogarea?",
+    "code": "SELECT MONTHS_BETWEEN(DATE '2024-03-01', DATE '2024-01-01') FROM dual;",
+    "options": [
+      {
+        "id": "A",
+        "text": "2",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "-2",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "60",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "1",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "text": "Ce returneaza ADD_MONTHS aplicat ultimei zile din ianuarie (2024 este an bisect)?",
+    "code": "SELECT ADD_MONTHS(DATE '2024-01-31', 1) FROM dual;",
+    "options": [
+      {
+        "id": "A",
+        "text": "29-FEB-2024 (ultima zi a lunii rezultate)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "28-FEB-2024",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "31-FEB-2024",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "02-MAR-2024",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "text": "Ce returneaza interogarea?",
+    "code": "SELECT TO_CHAR(DATE '2024-07-04', 'MM') FROM dual;",
+    "options": [
+      {
+        "id": "A",
+        "text": "07",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "7",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "JUL",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "04",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "text": "Ce returneaza interogarea?",
+    "code": "SELECT NULLIF(5, 5) FROM dual;",
+    "options": [
+      {
+        "id": "A",
+        "text": "NULL",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "5",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "0",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "o eroare",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "text": "Ce returneaza interogarea?",
+    "code": "SELECT NULLIF(5, 3) FROM dual;",
+    "options": [
+      {
+        "id": "A",
+        "text": "5",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "3",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "NULL",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "2",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "text": "Ce returneaza interogarea?",
+    "code": "SELECT CASE WHEN 1 = 2 THEN 'a' WHEN 2 = 2 THEN 'b' ELSE 'c' END FROM dual;",
+    "options": [
+      {
+        "id": "A",
+        "text": "b",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "a",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "c",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "NULL",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "text": "Ce returneaza interogarea?",
+    "code": "SELECT GREATEST(3, 7, 2) FROM dual;",
+    "options": [
+      {
+        "id": "A",
+        "text": "7",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "3",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "2",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "12",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "text": "Ce returneaza interogarea (LEAST cu un argument NULL)?",
+    "code": "SELECT LEAST(3, NULL, 1) FROM dual;",
+    "options": [
+      {
+        "id": "A",
+        "text": "NULL",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "1",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "3",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "o eroare",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "text": "COUNT(DISTINCT comision_pct) numara:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "valorile distincte non-NULL ale coloanei",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "toate randurile, inclusiv duplicatele",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "valorile distincte, inclusiv NULL o singura data",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "doar randurile cu valoarea NULL",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "text": "Care este diferenta dintre WHERE si HAVING?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "WHERE filtreaza randuri inainte de grupare, HAVING filtreaza grupuri dupa GROUP BY",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "Sunt identice",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "HAVING filtreaza randuri individuale",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "WHERE filtreaza grupurile rezultate",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "text": "Intr-o interogare cu GROUP BY, in lista SELECT pot aparea:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "doar coloanele din GROUP BY si/sau functii de grup",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "orice coloana din tabela",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "doar functii de grup",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "doar coloane care nu apar in GROUP BY",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "text": "Functiile de grup (SUM, AVG, MAX, MIN) in raport cu valorile NULL:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "le ignora (cu exceptia lui COUNT(*))",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "le considera 0",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "genereaza eroare",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "le numara ca valori distincte",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "text": "4 angajati au comisioanele: 100, 200, NULL, NULL. Ce returneaza AVG(comision)?",
+    "code": "SELECT AVG(comision) FROM angajati;",
+    "options": [
+      {
+        "id": "A",
+        "text": "150 (suma 300 impartita la cele 2 valori non-NULL)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "75",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "300",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "100",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "text": "Un NATURAL JOIN realizeaza jonctiunea:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "pe baza tuturor coloanelor cu acelasi nume din ambele tabele",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "doar pe baza cheii primare",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "ca un produs cartezian",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "doar pe coloanele numerice",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 116,
+    "text": "Un CROSS JOIN intre doua tabele produce:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "produsul cartezian (fiecare rand din prima combinat cu fiecare rand din a doua)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "doar randurile cu corespondent",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "reuniunea randurilor",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "o eroare de sintaxa",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 117,
+    "text": "Pentru a afisa numele fiecarui angajat impreuna cu numele managerului sau, din aceeasi tabela, se foloseste:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "un self join (tabela jonctionata cu ea insasi)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "operatorul UNION",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "obligatoriu o subinterogare",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "operatorul MINUS",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "text": "Ce returneaza interogarea?",
+    "code": "SELECT d.nume_dep\nFROM departamente d\nWHERE EXISTS (SELECT 1 FROM angajati a\n             WHERE a.id_departament = d.id_departament);",
+    "options": [
+      {
+        "id": "A",
+        "text": "departamentele care au cel putin un angajat",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "departamentele fara niciun angajat",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "toate departamentele",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "o eroare deoarece subinterogarea selecteaza 1",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 119,
+    "text": "Care este diferenta dintre UNION si UNION ALL?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "UNION elimina duplicatele (si implica o sortare), UNION ALL pastreaza toate randurile",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "Sunt identice",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "UNION ALL elimina duplicatele",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "UNION nu este permis in Oracle",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "text": "Operatorul MINUS returneaza:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "randurile din primul set care nu se gasesc in al doilea",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "reuniunea celor doua seturi",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "intersectia celor doua seturi",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "produsul cartezian",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "text": "Pentru operatorii pe multimi (UNION, INTERSECT, MINUS), interogarile combinate trebuie sa aiba:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "acelasi numar de coloane, cu tipuri de date compatibile",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "nume de coloane identice",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "aceeasi tabela sursa",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "o clauza ORDER BY in fiecare",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 122,
+    "text": "De ce aceasta interogare NU returneaza corect cei mai bine platiti 5 angajati?",
+    "code": "SELECT *\nFROM angajati\nWHERE ROWNUM <= 5\nORDER BY salariul DESC;",
+    "options": [
+      {
+        "id": "A",
+        "text": "ROWNUM se aplica inainte de ORDER BY, deci se ordoneaza 5 randuri alese arbitrar",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "ROWNUM nu poate fi folosit cu ORDER BY",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "Lipseste clauza GROUP BY",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Returneaza corect rezultatul dorit",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "text": "Pentru a selecta randurile 11-20 dupa salariu (Oracle 11g), abordarea corecta este:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "o subinterogare cu ORDER BY, peste care se aplica ROWNUM in exterior (sau ROW_NUMBER())",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "WHERE ROWNUM BETWEEN 11 AND 20",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "WHERE ROWNUM >= 11",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "nu se poate realiza in Oracle",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 124,
+    "text": "Ce face functia analitica ROW_NUMBER() OVER (ORDER BY salariul DESC)?",
+    "code": "SELECT nume, salariul,\n       ROW_NUMBER() OVER (ORDER BY salariul DESC) AS rn\nFROM angajati;",
+    "options": [
+      {
+        "id": "A",
+        "text": "atribuie un numar de ordine unic, 1 pentru cel mai mare salariu",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "returneaza numarul total de randuri",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "atribuie aceeasi valoare randurilor cu salariu egal",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "calculeaza suma salariilor",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 125,
+    "text": "Care este diferenta dintre RANK() si DENSE_RANK() la valori egale?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "RANK lasa goluri in numerotare dupa egalitati, DENSE_RANK nu lasa goluri",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "Sunt identice",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "DENSE_RANK lasa goluri, RANK nu",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Niciuna nu permite valori egale",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 126,
+    "text": "Functia analitica LAG(salariul) OVER (ORDER BY data_angajare) returneaza:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "valoarea salariului din randul anterior",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "valoarea din randul urmator",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "media salariilor",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "salariul maxim",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 127,
+    "text": "Ce calculeaza expresia AVG(salariul) OVER (PARTITION BY id_departament)?",
+    "code": "SELECT nume, id_departament,\n       AVG(salariul) OVER (PARTITION BY id_departament) AS medie_dep\nFROM angajati;",
+    "options": [
+      {
+        "id": "A",
+        "text": "media salariului din departamentul fiecarui rand, fara a reduce numarul de randuri",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "reduce rezultatul la cate un rand pe departament",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "media globala a tuturor salariilor",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "o eroare deoarece lipseste GROUP BY",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 128,
+    "text": "In interogarile ierarhice, pseudocoloana LEVEL indica:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "nivelul (adancimea) randului curent in ierarhie",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "numarul total de niveluri",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "id-ul randului parinte",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "numarul de noduri copil",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 129,
+    "text": "Clauza START WITH ... CONNECT BY PRIOR se foloseste pentru:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "parcurgerea datelor ierarhice (de tip arbore)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "sortarea rezultatelor",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "jonctiunea externa",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "gruparea datelor",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 130,
+    "text": "Implicit, la ORDER BY ... ASC in Oracle, valorile NULL apar:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "la sfarsit (NULLS LAST)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "la inceput",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "sunt ignorate",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "genereaza eroare",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 131,
+    "text": "In clauza ORDER BY se poate folosi:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "numele coloanei, aliasul sau pozitia numerica a coloanei din SELECT",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "doar numele coloanei",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "doar pozitia numerica",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "doar functii agregat",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 132,
+    "text": "Un alias de coloana definit in SELECT poate fi folosit in:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "clauza ORDER BY, dar NU in WHERE",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "atat in WHERE cat si in ORDER BY",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "doar in WHERE",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "nicaieri in aceeasi interogare",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 133,
+    "text": "SELECT DISTINCT a, b elimina:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "combinatiile duplicate de (a, b)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "doar duplicatele coloanei a",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "doar duplicatele coloanei b",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "toate randurile",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 134,
+    "text": "O subinterogare scalara folosita in lista SELECT trebuie sa returneze:",
+    "code": "SELECT nume, (SELECT COUNT(*) FROM angajati) AS total\nFROM angajati;",
+    "options": [
+      {
+        "id": "A",
+        "text": "exact o singura valoare (un rand, o coloana)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "mai multe randuri",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "mai multe coloane",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "niciun rand",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 135,
+    "text": "Daca subinterogarea din NOT IN returneaza cel putin un NULL, interogarea exterioara:",
+    "code": "SELECT nume FROM angajati\nWHERE id_manager NOT IN (SELECT id_manager FROM angajati);",
+    "options": [
+      {
+        "id": "A",
+        "text": "nu returneaza niciun rand (comparatia devine UNKNOWN)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "returneaza toate randurile",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "returneaza doar managerii",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "genereaza eroare de sintaxa",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 136,
+    "text": "De ce este adesea preferat EXISTS in locul lui IN pentru subinterogari cu posibile NULL-uri?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "EXISTS gestioneaza corect valorile NULL si poate fi mai eficient",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "IN nu exista in Oracle",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "EXISTS returneaza valori in loc de adevar logic",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "sunt intotdeauna complet identice",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 137,
+    "text": "Clauza WITH (subinterogare factorizata / CTE):",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "permite definirea unei subinterogari numite, refolosibila in interogarea principala",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "creeaza o tabela permanenta in baza de date",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "inlocuieste clauza GROUP BY",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "este un tip de trigger",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "text": "O cheie externa (FOREIGN KEY) asigura:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "integritatea referentiala: valorile trebuie sa existe in tabela parinte sau sa fie NULL",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "unicitatea valorilor din coloana",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "obligatoriu valori NOT NULL",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "criptarea datelor",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 139,
+    "text": "Clauza ON DELETE CASCADE pe o cheie externa face ca:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "la stergerea randului parinte sa se stearga automat si randurile copil",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "stergerea parintelui sa fie interzisa",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "randurile copil sa primeasca valoarea NULL",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "nu se intample nimic cu randurile copil",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "text": "Clauza ON DELETE SET NULL pe o cheie externa face ca:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "la stergerea parintelui, coloana de tip cheie externa din copii sa devina NULL",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "randurile copil sa fie sterse",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "stergerea sa fie interzisa",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "valorile copil sa fie pastrate neschimbate",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 141,
+    "text": "Constrangerea NOT NULL poate fi definita:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "doar la nivel de coloana",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "doar la nivel de tabela",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "atat la nivel de coloana cat si de tabela",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "nu exista in Oracle",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 142,
+    "text": "O cheie primara compusa:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "este formata din doua sau mai multe coloane, combinatia fiind unica si non-NULL",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "nu este permisa in Oracle",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "permite valori NULL pe una dintre coloane",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "este identica cu o constrangere UNIQUE",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 143,
+    "text": "Ce face comanda?",
+    "code": "ALTER TABLE angajati ADD (activ CHAR(1) DEFAULT 'D' NOT NULL);",
+    "options": [
+      {
+        "id": "A",
+        "text": "adauga o coloana noua cu valoare implicita 'D' si constrangere NOT NULL",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "modifica tipul unei coloane existente",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "sterge o coloana",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "redenumeste tabela",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 144,
+    "text": "Comanda DROP TABLE ... PURGE:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "sterge tabela fara a o trimite in Recycle Bin (nerecuperabila prin FLASHBACK)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "pastreaza datele intr-o copie",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "doar goleste tabela de randuri",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "dezactiveaza constrangerile tabelei",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 145,
+    "text": "Care este diferenta dintre CHAR(10) si VARCHAR2(10)?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "CHAR completeaza cu spatii pana la lungimea fixa, VARCHAR2 stocheaza doar caracterele efective",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "Sunt complet identice",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "VARCHAR2 are lungime fixa",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "CHAR are dimensiune maxima mai mare",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 146,
+    "text": "Tipul NUMBER(7,2) poate stoca:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "numere cu maxim 7 cifre semnificative, dintre care 2 zecimale (max. 99999.99)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "numere cu 7 zecimale",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "doar numere intregi",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "maxim 7 cifre, toate zecimale",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 147,
+    "text": "Tipul DATE in Oracle stocheaza:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "atat data cat si ora (an, luna, zi, ora, minut, secunda)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "doar data calendaristica",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "doar ora",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "doar anul",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 148,
+    "text": "La crearea unei constrangeri PRIMARY KEY sau UNIQUE, Oracle:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "creeaza automat un index (unic) pentru a impune constrangerea",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "nu creeaza niciun index",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "creeaza un trigger ascuns",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "creeaza o vizualizare",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 149,
+    "text": "Un index pe o coloana:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "accelereaza regasirea randurilor pe acea coloana, dar incetineste usor operatiile DML",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "stocheaza o copie completa a tabelei",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "garanteaza intotdeauna unicitatea",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "reduce dimensiunea tabelei pe disc",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 150,
+    "text": "Un sinonim (SYNONYM) in Oracle este:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "un nume alternativ pentru un obiect (tabela, vizualizare etc.)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "o copie fizica a tabelei",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "un tip de index",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "o constrangere",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 151,
+    "text": "O vizualizare poate fi actualizata direct (INSERT/UPDATE/DELETE) daca:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "este o vizualizare simpla (fara functii de grup, DISTINCT, GROUP BY sau join-uri complexe)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "contine GROUP BY",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "contine functii de grup",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "agrega date din mai multe tabele",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 152,
+    "text": "Clauza WITH CHECK OPTION la o vizualizare:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "impiedica modificarile prin vizualizare care ar produce randuri ce nu mai respecta conditia WHERE a vizualizarii",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "permite orice modificare",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "face vizualizarea read-only",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "creeaza un index pe vizualizare",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 153,
+    "text": "Ce face comanda?",
+    "code": "INSERT INTO angajati_arhiva\nSELECT * FROM angajati WHERE data_plecare IS NOT NULL;",
+    "options": [
+      {
+        "id": "A",
+        "text": "insereaza in arhiva toate randurile rezultate din SELECT",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "insereaza un singur rand",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "genereaza eroare deoarece nu sunt enumerate coloanele",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "actualizeaza tabela angajati",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 154,
+    "text": "Un UPDATE fara clauza WHERE:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "actualizeaza toate randurile tabelei",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "genereaza o eroare",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "actualizeaza un singur rand",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "nu actualizeaza niciun rand",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 155,
+    "text": "Comanda ROLLBACK TO SAVEPOINT p1:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "anuleaza modificarile facute dupa SAVEPOINT-ul p1, pastrand restul tranzactiei",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "anuleaza intreaga tranzactie",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "face COMMIT pana la p1",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "sterge savepoint-ul fara alt efect",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 156,
+    "text": "Executarea unei comenzi DDL (ex. CREATE TABLE) intr-o tranzactie:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "produce un COMMIT implicit al tranzactiei curente",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "produce un ROLLBACK implicit",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "nu afecteaza tranzactia curenta",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "esueaza daca exista modificari necomise",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 157,
+    "text": "La ce se foloseste comanda MERGE?",
+    "code": "MERGE INTO tinta t USING sursa s ON (t.id = s.id)\nWHEN MATCHED THEN UPDATE SET t.val = s.val\nWHEN NOT MATCHED THEN INSERT (id, val) VALUES (s.id, s.val);",
+    "options": [
+      {
+        "id": "A",
+        "text": "pentru randurile potrivite (MATCHED) se executa UPDATE, iar pentru cele nepotrivite INSERT",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "doar pentru stergerea randurilor",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "pentru crearea de tabele",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "pentru unirea a doua baze de date",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 158,
+    "text": "O operatie de actualizare (UPDATE) care nu afecteaza niciun rand:",
+    "code": "BEGIN\n  UPDATE angajati SET salariul = salariul WHERE id_angajat = -1;\n  IF SQL%NOTFOUND THEN\n    DBMS_OUTPUT.PUT_LINE('niciun rand');\n  END IF;\nEND;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "face SQL%NOTFOUND sa fie TRUE, deci se afiseaza 'niciun rand'",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "nu afiseaza nimic",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "genereaza exceptia NO_DATA_FOUND",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "afiseaza 0",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 159,
+    "text": "Ce face urmatoarea actualizare corelata?",
+    "code": "UPDATE angajati a\nSET salariul = (SELECT AVG(salariul) FROM angajati b\n               WHERE b.id_departament = a.id_departament);",
+    "options": [
+      {
+        "id": "A",
+        "text": "seteaza salariul fiecarui angajat la media salariului din departamentul sau",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "seteaza aceeasi medie globala pentru toti angajatii",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "genereaza eroare",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "nu modifica niciun rand",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 160,
+    "text": "Ce acorda comanda?",
+    "code": "GRANT SELECT, INSERT ON angajati TO user1;",
+    "options": [
+      {
+        "id": "A",
+        "text": "drepturile de SELECT si INSERT pe tabela angajati utilizatorului user1",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "toate drepturile asupra tabelei",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "doar dreptul de SELECT",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "dreptul de a sterge tabela",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 161,
+    "text": "Comanda REVOKE:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "retrage privilegii acordate anterior unui utilizator sau rol",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "acorda privilegii noi",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "creeaza utilizatori",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "sterge tabele",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 162,
+    "text": "Prima forma normala (1NF) cere ca:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "fiecare coloana sa contina valori atomice (indivizibile), fara grupuri repetitive",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "sa nu existe dependente tranzitive",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "sa nu existe dependente partiale fata de cheie",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "sa existe cel putin o cheie externa",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 163,
+    "text": "A doua forma normala (2NF) elimina:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "dependentele partiale ale atributelor non-cheie fata de o parte a cheii primare compuse",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "dependentele tranzitive",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "valorile NULL",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "randurile duplicate",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 164,
+    "text": "A treia forma normala (3NF) elimina:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "dependentele tranzitive (un atribut non-cheie depinde de alt atribut non-cheie)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "dependentele partiale",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "valorile neatomice",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "cheile externe",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 165,
+    "text": "Care este ordinea corecta a sectiunilor intr-un bloc PL/SQL?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "DECLARE, BEGIN, EXCEPTION, END",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "BEGIN, DECLARE, END",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "DECLARE, EXCEPTION, BEGIN, END",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "BEGIN, END, EXCEPTION",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 166,
+    "text": "In PL/SQL, operatorul de atribuire este:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": ":=",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "=",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "==",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "=>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 167,
+    "text": "Ce afiseaza blocul (variabila interioara cu acelasi nume)?",
+    "code": "DECLARE\n  v NUMBER := 1;\nBEGIN\n  DECLARE\n    v NUMBER := 2;\n  BEGIN\n    DBMS_OUTPUT.PUT_LINE(v);\n  END;\nEND;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "2 (variabila din blocul interior o ascunde pe cea exterioara)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "1",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "o eroare",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "NULL",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 168,
+    "text": "O variabila declarata CONSTANT:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "trebuie initializata la declarare si nu poate fi modificata ulterior",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "poate fi modificata o singura data",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "nu necesita o valoare initiala",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "este obligatoriu de tip BOOLEAN",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 169,
+    "text": "Folosirea atributului %TYPE la declararea variabilelor:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "face ca variabila sa preia automat tipul coloanei, adaptandu-se la modificarile schemei",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "creeaza un index pe coloana",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "face variabila constanta",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "o initializeaza cu 0",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 170,
+    "text": "Un cursor parametrizat permite:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "transmiterea de valori cursorului la deschidere, putand fi refolosit cu argumente diferite",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "returnarea mai multor seturi de rezultate simultan",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "inlocuirea functiilor",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "executarea unui COMMIT automat",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 171,
+    "text": "Clauza WHERE CURRENT OF intr-un UPDATE/DELETE:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "modifica/sterge randul curent indicat de cursor (declarat cu FOR UPDATE)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "modifica toate randurile",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "modifica randul urmator",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "necesita specificarea explicita a ROWID",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 172,
+    "text": "Despre ciclul cursor FOR cu subinterogare, care afirmatie este corecta?",
+    "code": "FOR rec IN (SELECT nume FROM angajati) LOOP\n  DBMS_OUTPUT.PUT_LINE(rec.nume);\nEND LOOP;",
+    "options": [
+      {
+        "id": "A",
+        "text": "deschide, parcurge si inchide cursorul automat, rec fiind un record implicit",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "necesita OPEN si CLOSE explicit",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "genereaza eroare de sintaxa",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "ruleaza o singura data, indiferent de numarul de randuri",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 173,
+    "text": "Ce exceptie se ridica daca interogarea nu gaseste niciun rand?",
+    "code": "DECLARE\n  v angajati.nume%TYPE;\nBEGIN\n  SELECT nume INTO v FROM angajati WHERE id_angajat = -999;\nEND;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "NO_DATA_FOUND",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "TOO_MANY_ROWS",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "VALUE_ERROR",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "niciuna; v devine NULL",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 174,
+    "text": "Ce exceptie se ridica daca SELECT INTO returneaza mai multe randuri?",
+    "code": "DECLARE\n  v angajati.nume%TYPE;\nBEGIN\n  SELECT nume INTO v FROM angajati;\nEND;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "TOO_MANY_ROWS",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "NO_DATA_FOUND",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "se ia automat primul rand",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "DUP_VAL_ON_INDEX",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 175,
+    "text": "Exceptia DUP_VAL_ON_INDEX apare cand:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "se incearca inserarea/actualizarea unei valori duplicate pentru o coloana cu index unic sau cheie primara",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "nu exista niciun rand",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "se imparte la zero",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "un cursor nu este inchis",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 176,
+    "text": "Ce exceptie se ridica la executia urmatoarei atribuiri?",
+    "code": "DECLARE\n  v NUMBER;\nBEGIN\n  v := 10 / 0;\nEND;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "ZERO_DIVIDE",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "VALUE_ERROR",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "returneaza NULL fara eroare",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "returneaza infinit",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 177,
+    "text": "Ce se intampla la executia blocului?",
+    "code": "DECLARE\n  v NUMBER(2);\nBEGIN\n  v := 1000;\nEND;\n/",
+    "options": [
+      {
+        "id": "A",
+        "text": "se ridica VALUE_ERROR (depasire de precizie)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "trunchiaza valoarea la 99",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "se executa fara eroare",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "se ridica NO_DATA_FOUND",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 178,
+    "text": "PRAGMA EXCEPTION_INIT permite:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "asocierea unui nume de exceptie definita de utilizator cu un cod de eroare Oracle",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "efectuarea unui COMMIT automat",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "definirea unei functii",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "dezactivarea tratarii exceptiilor",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 179,
+    "text": "Care este efectul apelului RAISE_APPLICATION_ERROR(-20010, 'Mesaj')?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "opreste executia si returneaza o eroare cu cod si mesaj personalizat catre apelant",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "doar afiseaza un mesaj fara a opri executia",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "face automat ROLLBACK la intreaga tranzactie",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "continua executia normal",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 180,
+    "text": "In tratarea unei exceptii, functia SQLCODE returneaza:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "codul numeric al erorii curente",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "mesajul text al erorii",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "numarul de randuri afectate",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "numele exceptiei",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 181,
+    "text": "Daca o exceptie nu este tratata in blocul curent:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "se propaga catre blocul apelant (extern); netratata nicaieri, ajunge la mediul apelant",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "este ignorata, iar blocul continua",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "blocul curent continua executia de la urmatoarea instructiune",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "se produce automat un COMMIT",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 182,
+    "text": "O functie PL/SQL:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "trebuie sa contina cel putin o instructiune RETURN care returneaza o valoare de tipul declarat",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "nu poate avea parametri",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "nu returneaza nicio valoare",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "nu poate fi apelata dintr-o comanda SELECT",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 183,
+    "text": "Care este diferenta fundamentala dintre o procedura si o functie?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "functia returneaza obligatoriu o valoare (prin RETURN), procedura nu returneaza direct o valoare",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "procedura nu poate avea parametri",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "functia nu poate avea parametri",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "sunt complet identice",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 184,
+    "text": "Un parametru de tip IN OUT:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "primeste o valoare la apel si poate returna o valoare modificata catre apelant",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "doar primeste o valoare (read-only)",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "doar returneaza o valoare",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "nu poate fi folosit in proceduri",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 185,
+    "text": "Ce tip de notatie a parametrilor foloseste apelul?",
+    "code": "calc(p_y => 10, p_x => 5);",
+    "options": [
+      {
+        "id": "A",
+        "text": "notatia nominala (named) - ordinea parametrilor nu conteaza",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "notatia pozitionala",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "o sintaxa eronata",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "notatia mixta obligatorie",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 186,
+    "text": "Un parametru cu valoare DEFAULT:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "poate fi omis la apel, folosindu-se valoarea implicita",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "este obligatoriu la fiecare apel",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "trebuie sa fie de tip OUT",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "nu este permis in PL/SQL",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 187,
+    "text": "Specificatia (spec) unui pachet contine:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "declaratiile publice (antete de subprograme, tipuri, variabile), iar corpul contine implementarea",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "doar cod executabil",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "doar variabile private",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "este optionala daca exista corpul",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 188,
+    "text": "Un subprogram declarat doar in corpul pachetului (nu si in specificatie) este:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "privat, accesibil doar din interiorul pachetului",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "public, accesibil de oriunde",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "o eroare de compilare",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "apelabil din orice schema",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 189,
+    "text": "O variabila declarata in specificatia pachetului:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "este publica si isi pastreaza valoarea pe durata sesiunii",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "este locala unei singure proceduri",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "se reseteaza la fiecare apel de subprogram",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "nu poate fi accesata din afara pachetului",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 190,
+    "text": "Supraincarcarea (overloading) a doua subprograme NU este posibila daca acestea difera doar prin:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "tipul valorii returnate sau doar prin numele parametrilor",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "numarul de parametri",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "tipul parametrilor",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "ordinea tipurilor parametrilor",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 191,
+    "text": "Un trigger BEFORE INSERT se executa:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "inainte ca randul sa fie efectiv inserat in tabela",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "dupa ce randul a fost inserat",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "in locul operatiei de inserare",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "doar la COMMIT",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 192,
+    "text": "Un trigger la nivel de instructiune (fara FOR EACH ROW) se declanseaza:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "o singura data pentru intreaga instructiune DML, indiferent de numarul de randuri afectate",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "o data pentru fiecare rand afectat",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "niciodata",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "doar pe tabele goale",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 193,
+    "text": "Intr-un trigger de tip row, la o operatie INSERT, :OLD:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "nu contine valori (este NULL), neavand sens un rand vechi",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "contine randul nou inserat",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "contine randul vechi",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "genereaza intotdeauna o eroare",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 194,
+    "text": "Intr-un trigger de tip row, la o operatie DELETE, :NEW:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "este NULL (nu exista un rand nou)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "contine randul sters",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "contine un rand nou implicit",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "contine media valorilor",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 195,
+    "text": "Un trigger compus (compound trigger) este util pentru:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "a combina mai multe momente de declansare intr-un singur obiect, ajutand la evitarea erorii de tabela in mutatie",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "a inlocui pachetele",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "a efectua COMMIT in tranzactie",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "a crea indecsi automat",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 196,
+    "text": "Un trigger de tip DDL se poate declansa la:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "comenzi precum CREATE, ALTER, DROP (la nivel de schema sau baza de date)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "doar comenzi INSERT",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "doar comenzi SELECT",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "doar la COMMIT",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 197,
+    "text": "Comanda ALTER TRIGGER nume DISABLE:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "dezactiveaza temporar triggerul, fara a-l sterge",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "sterge definitiv triggerul",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "doar il recompileaza",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "il face permanent activ",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 198,
+    "text": "La ce serveste clauza USING in SQL dinamic?",
+    "code": "EXECUTE IMMEDIATE 'UPDATE angajati SET salariul = :s WHERE id_angajat = :i'\n  USING v_sal, v_id;",
+    "options": [
+      {
+        "id": "A",
+        "text": "leaga variabilele PL/SQL la variabilele de legare (:s, :i) din comanda dinamica",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "defineste un cursor",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "efectueaza un COMMIT",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "declara variabile noi",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 199,
+    "text": "Folosirea variabilelor de legare (bind) in SQL dinamic:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "imbunatateste performanta (reutilizarea planurilor) si previne injectarea SQL",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "mareste dimensiunea bazei de date",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "dezactiveaza indecsii",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "este obligatorie doar pentru DDL",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 200,
+    "text": "PRAGMA AUTONOMOUS_TRANSACTION permite:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "ca un subprogram sa execute si sa comita/anuleze o tranzactie independenta de tranzactia principala",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "dezactivarea comenzii COMMIT",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "supraincarcarea subprogramelor",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "tratarea automata a tuturor exceptiilor",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 201,
+    "text": "Un tablou asociativ (INDEX BY) in PL/SQL:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "este o colectie indexata prin chei (intregi sau siruri), care exista doar in memorie",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "se stocheaza permanent in baza de date",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "are o dimensiune maxima fixa",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "nu permite stergerea elementelor",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 202,
+    "text": "Metoda COUNT a unei colectii returneaza:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "numarul de elemente existente in colectie",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "capacitatea maxima a colectiei",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "primul index",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "ultimul index",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 203,
+    "text": "Metodele FIRST si LAST ale unei colectii returneaza:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "primul, respectiv ultimul index (subscript) din colectie",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "prima si ultima valoare",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "numarul de elemente",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "intotdeauna NULL",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 204,
+    "text": "Apelul t.EXISTS(i) returneaza TRUE daca:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "elementul cu indexul i exista in colectie",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "colectia este goala",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "i este primul index",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "colectia este plina",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 205,
+    "text": "Spre deosebire de un VARRAY, o tabela imbricata (nested table):",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "nu are o dimensiune maxima fixa si poate deveni rara (sparse) dupa stergeri",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "are intotdeauna o dimensiune maxima fixa",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "nu se poate stoca in baza de date",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "nu permite parcurgerea",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 206,
+    "text": "Instructiunea FORALL este folosita pentru:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "a executa eficient o operatie DML repetata pe elementele unei colectii (bulk binding)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "a parcurge si afisa elementele unei colectii",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "a declara o colectie",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "a trata exceptiile in masa",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 207,
+    "text": "Clauza LIMIT folosita cu BULK COLLECT (intr-un FETCH):",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "restrange numarul de randuri aduse la fiecare iteratie, controland consumul de memorie",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "sorteaza randurile aduse",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "filtreaza valorile duplicate",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "limiteaza numarul de coloane",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 208,
+    "text": "Expresia CASE in PL/SQL:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "evalueaza conditiile si returneaza o valoare ce poate fi atribuita unei variabile",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "nu poate fi atribuita unei variabile",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "este disponibila doar in SQL, nu si in PL/SQL",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "ruleaza obligatoriu intr-o bucla",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 209,
+    "text": "Care este diferenta dintre o bucla WHILE si o bucla LOOP simpla (basic loop)?",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "WHILE testeaza conditia inainte de fiecare iteratie; bucla LOOP simpla necesita EXIT pentru a se opri",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "Sunt identice",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "Bucla LOOP simpla testeaza automat o conditie",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "Bucla WHILE ruleaza intotdeauna cel putin o data",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 210,
+    "text": "Instructiunea EXIT WHEN conditie:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "iese din bucla atunci cand conditia devine TRUE",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "sare peste iteratia curenta",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "reincepe bucla de la inceput",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "opreste intregul program",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 211,
+    "text": "Instructiunea CONTINUE intr-o bucla:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "trece la urmatoarea iteratie, sarind peste restul instructiunilor din iteratia curenta",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "iese complet din bucla",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "opreste programul",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "reseteaza contorul buclei",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 212,
+    "text": "Ce valori ia contorul in bucla?",
+    "code": "FOR i IN REVERSE 1..3 LOOP\n  DBMS_OUTPUT.PUT_LINE(i);\nEND LOOP;",
+    "options": [
+      {
+        "id": "A",
+        "text": "3, 2, 1",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "1, 2, 3",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "3, 2, 1, 0",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "o eroare de sintaxa",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 213,
+    "text": "Apelul CURRVAL al unei secvente, intr-o sesiune in care nu s-a apelat inca NEXTVAL:",
+    "code": "SELECT seq_x.CURRVAL FROM dual;",
+    "options": [
+      {
+        "id": "A",
+        "text": "genereaza o eroare (CURRVAL este nedefinit pana la primul NEXTVAL din sesiune)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "returneaza valoarea de start",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "returneaza 0",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "returneaza NULL",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 214,
+    "text": "Ce returneaza interogarea (Oracle 12c+)?",
+    "code": "SELECT nume, salariul\nFROM angajati\nORDER BY salariul DESC\nFETCH FIRST 3 ROWS ONLY;",
+    "options": [
+      {
+        "id": "A",
+        "text": "cei mai bine platiti 3 angajati",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "cei mai prost platiti 3 angajati",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "o eroare de sintaxa",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "toti angajatii ordonati",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 215,
+    "text": "Ce returneaza interogarea pentru un angajat cu comision_pct NULL?",
+    "code": "SELECT salariul + (salariul * comision_pct) AS venit\nFROM angajati\nWHERE id_angajat = 100;",
+    "options": [
+      {
+        "id": "A",
+        "text": "NULL (orice operatie aritmetica cu NULL produce NULL)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "valoarea salariului",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "0",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "o eroare ORA",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 216,
+    "text": "Ce returneaza COALESCE(NULL, NULL, 5, 10)?",
+    "code": "SELECT COALESCE(NULL, NULL, 5, 10) FROM dual;",
+    "options": [
+      {
+        "id": "A",
+        "text": "5 (prima expresie non-NULL)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "NULL",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "10",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "15",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 217,
+    "text": "Ce returneaza NVL2(NULL, 'are valoare', 'este null')?",
+    "code": "SELECT NVL2(NULL, 'are valoare', 'este null') FROM dual;",
+    "options": [
+      {
+        "id": "A",
+        "text": "este null",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "are valoare",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "NULL",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "o eroare",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 218,
+    "text": "Tabela are 107 randuri, dintre care 35 au comision_pct completat. Ce returneaza?",
+    "code": "SELECT COUNT(*), COUNT(comision_pct) FROM angajati;",
+    "options": [
+      {
+        "id": "A",
+        "text": "107, 35 (COUNT pe o coloana ignora valorile NULL)",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "107, 107",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "35, 35",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "107, 72",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 219,
+    "text": "Ce selecteaza interogarea?",
+    "code": "SELECT nume FROM angajati WHERE nume LIKE 'A%';",
+    "options": [
+      {
+        "id": "A",
+        "text": "numele care incep cu litera A",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "numele care se termina cu A",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "numele care contin litera A",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "numele formate dintr-un singur A",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 220,
+    "text": "Clauza WHERE salariul BETWEEN 1000 AND 2000 selecteaza salariile:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "intre 1000 si 2000 inclusiv ambele capete",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "strict mai mari ca 1000 si mai mici ca 2000",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "doar 1000 si 2000",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "in afara intervalului 1000-2000",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 221,
+    "text": "Ce face functia TO_DATE?",
+    "code": "SELECT TO_DATE('2024-07-04', 'YYYY-MM-DD') FROM dual;",
+    "options": [
+      {
+        "id": "A",
+        "text": "converteste un sir de caractere intr-o valoare de tip DATE folosind formatul indicat",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "converteste o data intr-un sir",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "returneaza data curenta",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "extrage anul dintr-o data",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 222,
+    "text": "Pseudocoloana ROWID:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "identifica unic adresa fizica a unui rand in baza de date",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "numeroteaza randurile rezultatului de la 1",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "indica nivelul intr-o ierarhie",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "returneaza valoarea cheii primare",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 223,
+    "text": "Conditia salariul > ANY (SELECT salariul FROM angajati WHERE id_departament = 30) este adevarata daca salariul este:",
+    "code": "SELECT nume FROM angajati\nWHERE salariul > ANY (SELECT salariul FROM angajati\n                     WHERE id_departament = 30);",
+    "options": [
+      {
+        "id": "A",
+        "text": "mai mare decat cel mai mic salariu din departamentul 30",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "mai mare decat cel mai mare salariu din departamentul 30",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "egal cu media salariilor din departamentul 30",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "mai mic decat toate salariile din departamentul 30",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 224,
+    "text": "Spre deosebire de TRUNCATE, comanda DELETE:",
+    "code": null,
+    "options": [
+      {
+        "id": "A",
+        "text": "este o comanda DML si poate fi anulata prin ROLLBACK, putand avea si clauza WHERE",
+        "isCorrect": true
+      },
+      {
+        "id": "B",
+        "text": "este DDL si nu poate fi anulata",
+        "isCorrect": false
+      },
+      {
+        "id": "C",
+        "text": "sterge si structura tabelei",
+        "isCorrect": false
+      },
+      {
+        "id": "D",
+        "text": "nu activeaza triggerele de stergere",
+        "isCorrect": false
+      }
+    ]
+  }
+]
