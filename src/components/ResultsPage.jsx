@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Trophy, Frown, RefreshCw, Home } from 'lucide-react'
 
-export default function ResultsPage({ score, total, passThreshold, onRestart, onMenu }) {
+export default function ResultsPage({ set, score, total, passThreshold, onRestart, onMenu }) {
   const passed = score.correct >= passThreshold
   const [mounted, setMounted] = useState(false)
   useEffect(() => {
@@ -15,7 +15,12 @@ export default function ResultsPage({ score, total, passThreshold, onRestart, on
 
   return (
     <div className="app-bg flex min-h-screen items-center justify-center px-6 py-16">
-      <div className="animate-pop-in w-full max-w-md rounded-3xl border border-rose-100 bg-white/85 p-8 text-center shadow-2xl shadow-rose-200/50 backdrop-blur sm:p-10">
+      <div className="animate-pop-in w-full max-w-md rounded-3xl border border-rose-100 bg-white/85 p-8 text-center shadow-xl shadow-rose-200/30 backdrop-blur sm:p-10">
+        {set && (
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-pink-500">
+            {set.title}
+          </p>
+        )}
         <div
           className={`mx-auto grid h-20 w-20 place-items-center rounded-3xl ${
             passed ? 'bg-emerald-100' : 'bg-rose-100'
@@ -89,10 +94,10 @@ export default function ResultsPage({ score, total, passThreshold, onRestart, on
           <button
             type="button"
             onClick={onRestart}
-            className="grad-primary inline-flex flex-1 items-center justify-center gap-2 rounded-2xl px-6 py-3.5 font-semibold text-white shadow-lg shadow-pink-500/30 transition duration-200 hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0 active:scale-[0.99]"
+            className="grad-primary inline-flex flex-1 items-center justify-center gap-2 rounded-2xl px-6 py-3.5 font-semibold text-white transition duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
           >
             <RefreshCw className="h-5 w-5" />
-            Genereaza Test Nou
+            Reia Chestionarul
           </button>
         </div>
       </div>

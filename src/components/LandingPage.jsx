@@ -1,11 +1,14 @@
-import { GraduationCap, Play, Database, ListChecks } from 'lucide-react'
+import { GraduationCap, Database, ListChecks, Check, RotateCcw, ChevronRight } from 'lucide-react'
 
-export default function LandingPage({ totalQuestions, testSize, onStart }) {
+export default function LandingPage({ sets, progress, onSelect }) {
+  const totalQuestions = sets.reduce((n, s) => n + s.questions.length, 0)
+  const doneCount = sets.filter((s) => progress[s.id]).length
+
   return (
-    <div className="app-bg flex min-h-screen flex-col items-center justify-center px-6 py-16 text-center">
-      <div className="flex max-w-xl flex-col items-center">
+    <div className="app-bg min-h-screen px-6 py-14">
+      <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
         <div
-          className="animate-fade-up grid h-20 w-20 place-items-center rounded-3xl border border-rose-200/70 bg-white/70 shadow-lg shadow-rose-200/50 backdrop-blur"
+          className="animate-fade-up grid h-20 w-20 place-items-center rounded-3xl border border-rose-200/70 bg-white/70 backdrop-blur"
           style={{ animationDelay: '0ms' }}
         >
           <GraduationCap className="h-10 w-10 text-pink-500" strokeWidth={1.7} />
@@ -26,26 +29,16 @@ export default function LandingPage({ totalQuestions, testSize, onStart }) {
         </h1>
 
         <p
-          className="animate-fade-up mt-5 text-lg leading-relaxed text-stone-500"
+          className="animate-fade-up mt-5 max-w-xl text-lg leading-relaxed text-stone-500"
           style={{ animationDelay: '210ms' }}
         >
-          Genereaza un test aleatoriu si exerseaza grile de SQL si PL/SQL,
-          intr-un stil de scoala de soferi. Mult succes!
+          Alege un chestionar din lista. Fiecare chestionar contine grile unice —
+          nu se repeta intre ele. Mult succes!
         </p>
 
-        <button
-          type="button"
-          onClick={onStart}
-          className="animate-fade-up grad-primary mt-9 inline-flex items-center gap-2.5 rounded-2xl px-9 py-4 text-lg font-semibold text-white shadow-xl shadow-pink-500/30 transition duration-200 hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-pink-500/40 active:translate-y-0 active:scale-[0.98]"
-          style={{ animationDelay: '290ms' }}
-        >
-          <Play className="h-5 w-5 fill-current" />
-          START
-        </button>
-
         <div
-          className="animate-fade-up mt-10 flex flex-wrap items-center justify-center gap-3 text-sm text-stone-500"
-          style={{ animationDelay: '370ms' }}
+          className="animate-fade-up mt-7 flex flex-wrap items-center justify-center gap-3 text-sm text-stone-500"
+          style={{ animationDelay: '290ms' }}
         >
           <span className="inline-flex items-center gap-1.5 rounded-full border border-rose-100 bg-white/60 px-3.5 py-1.5">
             <Database className="h-4 w-4 text-pink-400" />
@@ -53,10 +46,83 @@ export default function LandingPage({ totalQuestions, testSize, onStart }) {
           </span>
           <span className="inline-flex items-center gap-1.5 rounded-full border border-rose-100 bg-white/60 px-3.5 py-1.5">
             <ListChecks className="h-4 w-4 text-pink-400" />
-            {testSize} intrebari pe test
+            {sets.length} chestionare
+          </span>
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-rose-100 bg-white/60 px-3.5 py-1.5">
+            <Check className="h-4 w-4 text-emerald-500" />
+            {doneCount} / {sets.length} facute
           </span>
         </div>
       </div>
+
+      <div
+        className="animate-fade-up mx-auto mt-10 grid max-w-3xl grid-cols-1 gap-3 sm:grid-cols-2"
+        style={{ animationDelay: '370ms' }}
+      >
+        {sets.map((set) => (
+          <SetCard
+            key={set.id}
+            set={set}
+            result={progress[set.id]}
+            onClick={() => onSelect(set)}
+          />
+        ))}
+      </div>
     </div>
+  )
+}
+
+function SetCard({ set, result, onClick }) {
+  const done = Boolean(result)
+  const passed = done && result.passed
+
+  let ring = 'border-stone-200 hover:border-pink-300'
+  let numBox = 'border-stone-200 bg-stone-50 text-stone-500'
+  if (done) {
+    ring = passed
+      ? 'border-emerald-200 hover:border-emerald-300'
+      : 'border-rose-200 hover:border-rose-300'
+    numBox = passed
+      ? 'border-emerald-200 bg-emerald-50 text-emerald-600'
+      : 'border-rose-200 bg-rose-50 text-rose-500'
+  }
+
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`group flex items-center gap-4 rounded-2xl border bg-white/80 p-4 text-left backdrop-blur transition hover:-translate-y-0.5 ${ring}`}
+    >
+      <span
+        className={`grid h-12 w-12 shrink-0 place-items-center rounded-xl border font-display text-xl font-semibold ${numBox}`}
+      >
+        {set.id}
+      </span>
+
+      <span className="min-w-0 flex-1">
+        <span className="block font-semibold text-stone-800">{set.title}</span>
+        <span className="block text-sm text-stone-400">
+          {set.questions.length} grile
+        </span>
+      </span>
+
+      {done ? (
+        <span
+          className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-semibold ${
+            passed
+              ? 'bg-emerald-50 text-emerald-600'
+              : 'bg-rose-50 text-rose-500'
+          }`}
+        >
+          {passed ? <Check className="h-4 w-4" /> : <RotateCcw className="h-4 w-4" />}
+          {result.correct}/{result.total}
+        </span>
+      ) : (
+        <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-pink-50 px-3 py-1.5 text-sm font-semibold text-pink-500">
+          Start
+          <ChevronRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
+        </span>
+      )}
+    </button>
   )
 }

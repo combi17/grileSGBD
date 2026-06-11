@@ -1,9 +1,9 @@
 import { useMemo, useState } from 'react'
-import { Check, X, CheckCircle2, XCircle, ArrowRight } from 'lucide-react'
+import { Check, X, CheckCircle2, XCircle, ArrowRight, ChevronLeft } from 'lucide-react'
 import CodeBlock from './CodeBlock'
 import { setsEqual } from '../utils/quiz'
 
-export default function QuizPage({ question, index, total, score, onAnswer, onNext }) {
+export default function QuizPage({ set, question, index, total, score, onAnswer, onNext, onExit }) {
   const [selected, setSelected] = useState(() => new Set())
   const [checked, setChecked] = useState(false)
 
@@ -39,9 +39,18 @@ export default function QuizPage({ question, index, total, score, onAnswer, onNe
       {/* Header cu progres si counter (dreapta sus) */}
       <header className="sticky top-0 z-10 border-b border-rose-100/80 bg-white/70 backdrop-blur-md">
         <div className="mx-auto flex max-w-3xl items-center justify-between gap-5 px-5 py-3.5">
+          <button
+            type="button"
+            onClick={onExit}
+            className="inline-flex shrink-0 items-center gap-1 rounded-full border border-stone-200 bg-white/80 px-3 py-2 text-sm font-medium text-stone-500 transition hover:border-pink-300 hover:text-pink-600"
+          >
+            <ChevronLeft className="h-4 w-4" />
+            Meniu
+          </button>
           <div className="min-w-0 flex-1">
             <p className="text-sm font-medium text-stone-500">
-              Intrebarea <span className="font-semibold text-stone-800">{index + 1}</span> / {total}
+              <span className="font-semibold text-pink-500">{set.title}</span>
+              {' · '}Intrebarea <span className="font-semibold text-stone-800">{index + 1}</span> / {total}
             </p>
             <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-rose-100">
               <div
@@ -95,7 +104,7 @@ export default function QuizPage({ question, index, total, score, onAnswer, onNe
                 type="button"
                 onClick={check}
                 disabled={selected.size === 0}
-                className="grad-primary inline-flex w-full items-center justify-center gap-2 rounded-2xl px-7 py-3.5 font-semibold text-white shadow-lg shadow-pink-500/30 transition duration-200 hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none sm:w-auto"
+                className="grad-primary inline-flex w-full items-center justify-center gap-2 rounded-2xl px-7 py-3.5 font-semibold text-white transition duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto"
               >
                 Verifica Raspunsul
               </button>
@@ -119,7 +128,7 @@ export default function QuizPage({ question, index, total, score, onAnswer, onNe
                 <button
                   type="button"
                   onClick={onNext}
-                  className="grad-primary inline-flex items-center justify-center gap-2 rounded-2xl px-7 py-3.5 font-semibold text-white shadow-lg shadow-pink-500/30 transition duration-200 hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0 active:scale-[0.99]"
+                  className="grad-primary inline-flex items-center justify-center gap-2 rounded-2xl px-7 py-3.5 font-semibold text-white transition duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
                 >
                   {isLast ? 'Vezi Rezultatele' : 'Urmatoarea Intrebare'}
                   <ArrowRight className="h-5 w-5" />

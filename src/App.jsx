@@ -1,21 +1,23 @@
 import { useState } from 'react'
-import questions from './data/questions.json'
-import { getRandomQuestions } from './utils/quiz'
+import {
+  QUIZ_SETS,
+  passThresholdFor,
+  loadProgress,
+  saveProgress,
+} from './utils/quiz'
 import LandingPage from './components/LandingPage'
 import QuizPage from './components/QuizPage'
 import ResultsPage from './components/ResultsPage'
 
-const TEST_SIZE = 20
-const PASS_THRESHOLD = 10
-
 export default function App() {
   const [screen, setScreen] = useState('landing')
-  const [test, setTest] = useState([])
+  const [activeSet, setActiveSet] = useState(null)
   const [index, setIndex] = useState(0)
   const [score, setScore] = useState({ correct: 0, incorrect: 0 })
+  const [progress, setProgress] = useState(() => loadProgress())
 
-  function startTest() {
-    setTest(getRandomQuestions(questions, TEST_SIZE))
+  function startSet(set) {
+    setActiveSet(set)
     setIndex(0)
     setScore({ correct: 0, incorrect: 0 })
     setScreen('quiz')
@@ -29,17 +31,28 @@ export default function App() {
   }
 
   function handleNext() {
-    if (index + 1 < test.length) setIndex((i) => i + 1)
-    else setScreen('results')
+    if (index + 1 < activeSet.questions.length) {
+      setIndex((i) => i + 1)
+    } else {
+      // Salveaza progresul la finalul chestionarului
+      const total = activeSet.questions.length
+      const result = {
+        correct: score.correct,
+        total,
+        passed: score.correct >= passThresholdFor(total),
+      }
+      setProgress(saveProgress(activeSet.id, result))
+      setScreen('results')
+    }
+  }
+
+  function backToMenu() {
+    setScreen('landing')
   }
 
   if (screen === 'landing') {
     return (
-      <LandingPage
-        totalQuestions={questions.length}
-        testSize={TEST_SIZE}
-        onStart={startTest}
-      />
+      <LandingPage sets={QUIZ_SETS} progress={progress} onSelect={startSet} />
     )
   }
 
@@ -47,23 +60,27 @@ export default function App() {
     return (
       <QuizPage
         key={index}
-        question={test[index]}
+        set={activeSet}
+        question={activeSet.questions[index]}
         index={index}
-        total={test.length}
+        total={activeSet.questions.length}
         score={score}
         onAnswer={handleAnswer}
         onNext={handleNext}
+        onExit={backToMenu}
       />
     )
   }
 
+  const total = activeSet.questions.length
   return (
     <ResultsPage
+      set={activeSet}
       score={score}
-      total={test.length}
-      passThreshold={PASS_THRESHOLD}
-      onRestart={startTest}
-      onMenu={() => setScreen('landing')}
+      total={total}
+      passThreshold={passThresholdFor(total)}
+      onRestart={() => startSet(activeSet)}
+      onMenu={backToMenu}
     />
   )
 }
