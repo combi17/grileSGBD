@@ -45,7 +45,6 @@ export default function ResultsPage({ set, score, total, passThreshold, onRestar
           Ai nevoie de minim {passThreshold} raspunsuri corecte pentru a promova.
         </p>
 
-        {/* Gauge circular cu scorul */}
         <div className="relative mx-auto mt-7 h-36 w-36">
           <svg className="h-full w-full -rotate-90" viewBox="0 0 128 128">
             <circle cx="64" cy="64" r={R} fill="none" stroke="#fce7f3" strokeWidth="12" />

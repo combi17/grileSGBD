@@ -34,7 +34,6 @@ export default function App() {
     if (index + 1 < activeSet.questions.length) {
       setIndex((i) => i + 1)
     } else {
-      // Salveaza progresul la finalul chestionarului
       const total = activeSet.questions.length
       const result = {
         correct: score.correct,

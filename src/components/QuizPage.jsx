@@ -36,7 +36,6 @@ export default function QuizPage({ set, question, index, total, score, onAnswer,
 
   return (
     <div className="app-bg min-h-screen">
-      {/* Header cu progres si counter (dreapta sus) */}
       <header className="sticky top-0 z-10 border-b border-rose-100/80 bg-white/70 backdrop-blur-md">
         <div className="mx-auto flex max-w-3xl items-center justify-between gap-5 px-5 py-3.5">
           <button

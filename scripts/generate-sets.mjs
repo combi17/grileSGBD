@@ -1,15 +1,8 @@
-// Script ONE-TIME: imparte toate grilele din questions.json in chestionare fixe.
-//
-// Ruleaza o singura data pentru a "ingheta" seturile. Dupa generare, fisierul
-// src/data/sets.json devine sursa de adevar (hardcodata) si NU se mai regenereaza,
-// ca seturile sa fie identice la refresh / pe orice calculator.
-//
-// Re-rularea ar reamesteca totul. NU rula din nou decat daca vrei sa resetezi
-// complet impartirea (si sa pierzi corespondenta cu progresul salvat local).
+// Imparte grilele din questions.json in chestionare fixe si scrie src/data/sets.json.
+// Foloseste un seed fix, deci rezultatul e reproductibil. Re-rularea cu alt seed
+// schimba seturile si invalideaza progresul salvat local.
 //
 //   node scripts/generate-sets.mjs
-//
-// Pentru reproductibilitate folosim un PRNG cu seed fix (mulberry32), nu Math.random.
 
 import { readFileSync, writeFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
@@ -19,7 +12,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = join(__dirname, '..')
 
 const SET_COUNT = 11
-const SEED = 0x56bd2026 // schimba seed-ul doar daca vrei alta impartire
+const SEED = 0x56bd2026
 
 function mulberry32(seed) {
   let a = seed >>> 0
@@ -36,7 +29,6 @@ const questions = JSON.parse(
   readFileSync(join(root, 'src/data/questions.json'), 'utf8')
 )
 
-// Amestec Fisher-Yates deterministic
 const rand = mulberry32(SEED)
 const ids = questions.map((q) => q.id)
 for (let i = ids.length - 1; i > 0; i--) {
@@ -44,7 +36,6 @@ for (let i = ids.length - 1; i > 0; i--) {
   ;[ids[i], ids[j]] = [ids[j], ids[i]]
 }
 
-// Imparte cat mai egal in SET_COUNT chestionare (primele primesc cele +1 ramase)
 const base = Math.floor(ids.length / SET_COUNT)
 const extra = ids.length % SET_COUNT
 

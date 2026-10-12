@@ -1,16 +1,34 @@
-# React + Vite
+# SGBD Exam Prep
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Quiz app I built to study for the Database Management Systems (SGBD) exam at university. It covers Oracle SQL and PL/SQL: 118 multiple-choice questions split into 12 fixed quizzes, with code snippets shown the way they would look in an editor.
 
-Currently, two official plugins are available:
+Live: [grile-sgbd.vercel.app](https://grile-sgbd.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Quiz list](docs/landing.png)
 
-## React Compiler
+![Question after checking the answer](docs/quiz.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## How it works
 
-## Expanding the ESLint configuration
+- Pick a quiz from the list. Each one has its own set of questions, and no question appears in two quizzes.
+- Questions can have more than one correct answer. After you check, your correct picks turn green, wrong picks turn red, and any correct answers you missed are highlighted.
+- A counter at the top tracks correct and wrong answers. You pass a quiz with at least half the answers right.
+- Results are saved in `localStorage`, so the list shows which quizzes you've already passed.
+- SQL and PL/SQL snippets get syntax highlighting from a small tokenizer in `src/components/CodeBlock.jsx`, without an external library.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Stack
+
+React 19, Vite, Tailwind CSS 4, lucide-react. No backend: the questions are bundled as JSON.
+
+## Running locally
+
+```bash
+npm install
+npm run dev
+```
+
+## Data
+
+- `src/data/questions.json` holds every question, its options, the correct answers and an optional code snippet.
+- `src/data/sets.json` decides which questions go into which quiz. It's generated once by `scripts/generate-sets.mjs`, which shuffles with a fixed seed, so the quizzes stay the same between visits and saved progress keeps matching. Re-run the script only if you add questions and want new quizzes.
+- `resurse grile/` has the PDFs the questions were taken from.
